@@ -52,14 +52,14 @@
     {
      "label": "新房（全市）",
      "date": "2026-11-07",
-     "count": 64,
-     "area": 7925.0
+     "count": 75,
+     "area": 9224.0
     },
     {
      "label": "其中住宅",
      "date": "2026-11-07",
-     "count": 63,
-     "area": 7587.81
+     "count": 73,
+     "area": 8845.2
     }
    ],
    "details": []
@@ -79,14 +79,14 @@
     {
      "label": "市区合计",
      "date": "2026/11/7",
-     "count": 15,
-     "area": 1185.43
+     "count": 22,
+     "area": 2358.61
     },
     {
      "label": "其中住宅",
      "date": "2026/11/7",
-     "count": 8,
-     "area": 966.11
+     "count": 12,
+     "area": 1919.13
     }
    ],
    "details": []
@@ -114,33 +114,6 @@
      "date": "2026/11/6",
      "count": 412,
      "area": 27694.59
-    }
-   ],
-   "details": []
-  },
-  {
-   "city": "西安",
-   "status": "accessible_static",
-   "portal": "西安市住房和城乡建设局",
-   "url": "https://zjj.xa.gov.cn/zw/zfxxgkml/zwxx/gsgg/fcscjy/2118548734971330562.html",
-   "note": "每月初发布上月二手房网签备案，整月累计；全市总量为 96.11 万㎡口径。",
-   "granularity": "month_to_date",
-   "period": "month_to_date",
-   "period_start": "2026-10-01",
-   "period_end": "2026-10-31",
-   "fetched_at": "2026-11-07",
-   "rows": [
-    {
-     "label": "10 月住宅网签备案",
-     "date": "2026-10-31",
-     "count": 8506,
-     "area": 881600.0
-    },
-    {
-     "label": "10 月存量房合计（仅面积）",
-     "date": "2026-10-31",
-     "count": null,
-     "area": 961100.0
     }
    ],
    "details": []
@@ -187,8 +160,8 @@
     {
      "label": "新房合计（当日）",
      "date": "2026-11-07",
-     "count": 20,
-     "area": 2765.41
+     "count": 32,
+     "area": 4299.08
     }
    ],
    "details": []
@@ -206,9 +179,9 @@
    "fetched_at": "2026-11-07",
    "rows": [
     {
-     "label": "今日成交（含住宅/非住宅），本月（11 月 1 日–今日）成交面积 7.27 万㎡",
+     "label": "今日成交（含住宅/非住宅），本月（11 月 1 日–今日）成交面积 7.28 万㎡",
      "date": "2026-11-07",
-     "count": 28,
+     "count": 30,
      "area": null
     }
    ],
