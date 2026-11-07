@@ -1,0 +1,45 @@
+name: 更新成交量（日更）
+
+# 成交量是真日更：每天抓一次各城市官方网签页面。
+# 与「房价指数」workflow 完全独立：一个挂了不影响另一个，失败日志各自独立。
+on:
+  schedule:
+    # 每天 01:10 UTC = 北京时间 09:10（早于房产交易中心上班时间，抓的是前一天/当日累计）
+    - cron: "10 1 * * *"
+  workflow_dispatch: # 支持网页手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  update-deals:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 准备 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 安装依赖
+        run: pip install beautifulsoup4 lxml
+
+      - name: 抓取各城市官方网签数据
+        run: python3 data-pipeline/scrape_deals.py
+
+      - name: 重建 manifest（版本号 + sha256）
+        run: python3 data-pipeline/publish_data.py --in-place --data-dir data
+
+      - name: 有变化才提交
+        run: |
+          if git diff --quiet -- data; then
+            echo "成交量数据与昨天一致，跳过提交"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git commit -m "data(deals): $(date -u +%Y-%m-%d)"
+          git push
