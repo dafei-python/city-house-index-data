@@ -1,0 +1,1353 @@
+{
+  "schema_version": 1,
+  "month": "2026-08",
+  "month_label": "2026年8月",
+  "publish_date": "2026-09-15",
+  "source": {
+    "title": "国家统计局信息公开",
+    "url": "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202609/t20260915_1965304.html",
+    "publisher": "国家统计局"
+  },
+  "caliber": {
+    "new": "新建商品住宅销售价格指数（上月=100、上年同月=100、上年同期=100）",
+    "second": "二手住宅销售价格指数（上月=100、上年同月=100、上年同期=100）",
+    "survey_scope": "70 个大中城市市辖区，不含县；价格来自当地房地产管理部门网签数据。",
+    "disclaimer": "指数是价格变动的相对值，不是均价；官方不发布 70 城住宅均价。"
+  },
+  "tables_located_by_title": [
+    "表1：2026年8月70个大中城市新建商品住宅销售价格指数",
+    "表2：2026年8月70个大中城市二手住宅销售价格指数"
+  ],
+  "cities": [
+    {
+      "city": "北京",
+      "new": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 97.7,
+        "yoy_pct": -2.3,
+        "ytd_index": 97.8,
+        "ytd_pct": -2.2
+      },
+      "second": {
+        "mom_index": 99.9,
+        "mom_pct": -0.1,
+        "yoy_index": 96.5,
+        "yoy_pct": -3.5,
+        "ytd_index": 93.4,
+        "ytd_pct": -6.6
+      }
+    },
+    {
+      "city": "唐山",
+      "new": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 94.1,
+        "yoy_pct": -5.9,
+        "ytd_index": 93.9,
+        "ytd_pct": -6.1
+      },
+      "second": {
+        "mom_index": 99.4,
+        "mom_pct": -0.6,
+        "yoy_index": 92.6,
+        "yoy_pct": -7.4,
+        "ytd_index": 92.0,
+        "ytd_pct": -8.0
+      }
+    },
+    {
+      "city": "天津",
+      "new": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 95.9,
+        "yoy_pct": -4.1,
+        "ytd_index": 95.5,
+        "ytd_pct": -4.5
+      },
+      "second": {
+        "mom_index": 99.5,
+        "mom_pct": -0.5,
+        "yoy_index": 94.4,
+        "yoy_pct": -5.6,
+        "ytd_index": 94.1,
+        "ytd_pct": -5.9
+      }
+    },
+    {
+      "city": "秦皇岛",
+      "new": {
+        "mom_index": 99.5,
+        "mom_pct": -0.5,
+        "yoy_index": 94.9,
+        "yoy_pct": -5.1,
+        "ytd_index": 94.8,
+        "ytd_pct": -5.2
+      },
+      "second": {
+        "mom_index": 99.5,
+        "mom_pct": -0.5,
+        "yoy_index": 92.9,
+        "yoy_pct": -7.1,
+        "ytd_index": 92.2,
+        "ytd_pct": -7.8
+      }
+    },
+    {
+      "city": "石家庄",
+      "new": {
+        "mom_index": 99.4,
+        "mom_pct": -0.6,
+        "yoy_index": 95.7,
+        "yoy_pct": -4.3,
+        "ytd_index": 95.6,
+        "ytd_pct": -4.4
+      },
+      "second": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 95.1,
+        "yoy_pct": -4.9,
+        "ytd_index": 94.5,
+        "ytd_pct": -5.5
+      }
+    },
+    {
+      "city": "包头",
+      "new": {
+        "mom_index": 99.5,
+        "mom_pct": -0.5,
+        "yoy_index": 93.2,
+        "yoy_pct": -6.8,
+        "ytd_index": 92.7,
+        "ytd_pct": -7.3
+      },
+      "second": {
+        "mom_index": 99.4,
+        "mom_pct": -0.6,
+        "yoy_index": 92.8,
+        "yoy_pct": -7.2,
+        "ytd_index": 92.1,
+        "ytd_pct": -7.9
+      }
+    },
+    {
+      "city": "太原",
+      "new": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 98.2,
+        "yoy_pct": -1.8,
+        "ytd_index": 98.2,
+        "ytd_pct": -1.8
+      },
+      "second": {
+        "mom_index": 99.4,
+        "mom_pct": -0.6,
+        "yoy_index": 94.5,
+        "yoy_pct": -5.5,
+        "ytd_index": 95.2,
+        "ytd_pct": -4.8
+      }
+    },
+    {
+      "city": "丹东",
+      "new": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 97.4,
+        "yoy_pct": -2.6,
+        "ytd_index": 97.6,
+        "ytd_pct": -2.4
+      },
+      "second": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 97.3,
+        "yoy_pct": -2.7,
+        "ytd_index": 96.6,
+        "ytd_pct": -3.4
+      }
+    },
+    {
+      "city": "呼和浩特",
+      "new": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 96.3,
+        "yoy_pct": -3.7,
+        "ytd_index": 96.1,
+        "ytd_pct": -3.9
+      },
+      "second": {
+        "mom_index": 99.4,
+        "mom_pct": -0.6,
+        "yoy_index": 94.1,
+        "yoy_pct": -5.9,
+        "ytd_index": 94.2,
+        "ytd_pct": -5.8
+      }
+    },
+    {
+      "city": "锦州",
+      "new": {
+        "mom_index": 99.9,
+        "mom_pct": -0.1,
+        "yoy_index": 97.3,
+        "yoy_pct": -2.7,
+        "ytd_index": 97.1,
+        "ytd_pct": -2.9
+      },
+      "second": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 97.1,
+        "yoy_pct": -2.9,
+        "ytd_index": 96.5,
+        "ytd_pct": -3.5
+      }
+    },
+    {
+      "city": "沈阳",
+      "new": {
+        "mom_index": 100.2,
+        "mom_pct": 0.2,
+        "yoy_index": 100.3,
+        "yoy_pct": 0.3,
+        "ytd_index": 99.9,
+        "ytd_pct": -0.1
+      },
+      "second": {
+        "mom_index": 100.0,
+        "mom_pct": 0.0,
+        "yoy_index": 99.1,
+        "yoy_pct": -0.9,
+        "ytd_index": 97.8,
+        "ytd_pct": -2.2
+      }
+    },
+    {
+      "city": "吉林",
+      "new": {
+        "mom_index": 100.0,
+        "mom_pct": 0.0,
+        "yoy_index": 98.4,
+        "yoy_pct": -1.6,
+        "ytd_index": 98.1,
+        "ytd_pct": -1.9
+      },
+      "second": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 96.1,
+        "yoy_pct": -3.9,
+        "ytd_index": 95.7,
+        "ytd_pct": -4.3
+      }
+    },
+    {
+      "city": "大连",
+      "new": {
+        "mom_index": 100.1,
+        "mom_pct": 0.1,
+        "yoy_index": 100.3,
+        "yoy_pct": 0.3,
+        "ytd_index": 99.5,
+        "ytd_pct": -0.5
+      },
+      "second": {
+        "mom_index": 100.0,
+        "mom_pct": 0.0,
+        "yoy_index": 97.1,
+        "yoy_pct": -2.9,
+        "ytd_index": 95.8,
+        "ytd_pct": -4.2
+      }
+    },
+    {
+      "city": "牡丹江",
+      "new": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 97.9,
+        "yoy_pct": -2.1,
+        "ytd_index": 98.3,
+        "ytd_pct": -1.7
+      },
+      "second": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 97.2,
+        "yoy_pct": -2.8,
+        "ytd_index": 97.2,
+        "ytd_pct": -2.8
+      }
+    },
+    {
+      "city": "长春",
+      "new": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 99.1,
+        "yoy_pct": -0.9,
+        "ytd_index": 98.3,
+        "ytd_pct": -1.7
+      },
+      "second": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 96.2,
+        "yoy_pct": -3.8,
+        "ytd_index": 96.0,
+        "ytd_pct": -4.0
+      }
+    },
+    {
+      "city": "无锡",
+      "new": {
+        "mom_index": 100.4,
+        "mom_pct": 0.4,
+        "yoy_index": 97.4,
+        "yoy_pct": -2.6,
+        "ytd_index": 95.8,
+        "ytd_pct": -4.2
+      },
+      "second": {
+        "mom_index": 99.9,
+        "mom_pct": -0.1,
+        "yoy_index": 96.1,
+        "yoy_pct": -3.9,
+        "ytd_index": 94.5,
+        "ytd_pct": -5.5
+      }
+    },
+    {
+      "city": "哈尔滨",
+      "new": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 97.5,
+        "yoy_pct": -2.5,
+        "ytd_index": 97.4,
+        "ytd_pct": -2.6
+      },
+      "second": {
+        "mom_index": 99.9,
+        "mom_pct": -0.1,
+        "yoy_index": 95.8,
+        "yoy_pct": -4.2,
+        "ytd_index": 95.3,
+        "ytd_pct": -4.7
+      }
+    },
+    {
+      "city": "徐州",
+      "new": {
+        "mom_index": 100.3,
+        "mom_pct": 0.3,
+        "yoy_index": 96.8,
+        "yoy_pct": -3.2,
+        "ytd_index": 95.5,
+        "ytd_pct": -4.5
+      },
+      "second": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 96.0,
+        "yoy_pct": -4.0,
+        "ytd_index": 92.7,
+        "ytd_pct": -7.3
+      }
+    },
+    {
+      "city": "上海",
+      "new": {
+        "mom_index": 100.4,
+        "mom_pct": 0.4,
+        "yoy_index": 103.0,
+        "yoy_pct": 3.0,
+        "ytd_index": 103.5,
+        "ytd_pct": 3.5
+      },
+      "second": {
+        "mom_index": 100.3,
+        "mom_pct": 0.3,
+        "yoy_index": 99.2,
+        "yoy_pct": -0.8,
+        "ytd_index": 95.6,
+        "ytd_pct": -4.4
+      }
+    },
+    {
+      "city": "扬州",
+      "new": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 96.4,
+        "yoy_pct": -3.6,
+        "ytd_index": 95.2,
+        "ytd_pct": -4.8
+      },
+      "second": {
+        "mom_index": 100.2,
+        "mom_pct": 0.2,
+        "yoy_index": 92.9,
+        "yoy_pct": -7.1,
+        "ytd_index": 92.8,
+        "ytd_pct": -7.2
+      }
+    },
+    {
+      "city": "南京",
+      "new": {
+        "mom_index": 99.9,
+        "mom_pct": -0.1,
+        "yoy_index": 98.7,
+        "yoy_pct": -1.3,
+        "ytd_index": 97.0,
+        "ytd_pct": -3.0
+      },
+      "second": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 95.2,
+        "yoy_pct": -4.8,
+        "ytd_index": 93.2,
+        "ytd_pct": -6.8
+      }
+    },
+    {
+      "city": "温州",
+      "new": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 96.2,
+        "yoy_pct": -3.8,
+        "ytd_index": 95.9,
+        "ytd_pct": -4.1
+      },
+      "second": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 94.7,
+        "yoy_pct": -5.3,
+        "ytd_index": 93.8,
+        "ytd_pct": -6.2
+      }
+    },
+    {
+      "city": "杭州",
+      "new": {
+        "mom_index": 100.2,
+        "mom_pct": 0.2,
+        "yoy_index": 102.2,
+        "yoy_pct": 2.2,
+        "ytd_index": 102.3,
+        "ytd_pct": 2.3
+      },
+      "second": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 96.5,
+        "yoy_pct": -3.5,
+        "ytd_index": 95.7,
+        "ytd_pct": -4.3
+      }
+    },
+    {
+      "city": "金华",
+      "new": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 95.7,
+        "yoy_pct": -4.3,
+        "ytd_index": 95.7,
+        "ytd_pct": -4.3
+      },
+      "second": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 94.7,
+        "yoy_pct": -5.3,
+        "ytd_index": 94.2,
+        "ytd_pct": -5.8
+      }
+    },
+    {
+      "city": "宁波",
+      "new": {
+        "mom_index": 100.1,
+        "mom_pct": 0.1,
+        "yoy_index": 99.2,
+        "yoy_pct": -0.8,
+        "ytd_index": 98.3,
+        "ytd_pct": -1.7
+      },
+      "second": {
+        "mom_index": 100.0,
+        "mom_pct": 0.0,
+        "yoy_index": 97.3,
+        "yoy_pct": -2.7,
+        "ytd_index": 94.8,
+        "ytd_pct": -5.2
+      }
+    },
+    {
+      "city": "蚌埠",
+      "new": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 96.6,
+        "yoy_pct": -3.4,
+        "ytd_index": 96.4,
+        "ytd_pct": -3.6
+      },
+      "second": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 95.8,
+        "yoy_pct": -4.2,
+        "ytd_index": 95.2,
+        "ytd_pct": -4.8
+      }
+    },
+    {
+      "city": "合肥",
+      "new": {
+        "mom_index": 100.1,
+        "mom_pct": 0.1,
+        "yoy_index": 100.1,
+        "yoy_pct": 0.1,
+        "ytd_index": 100.8,
+        "ytd_pct": 0.8
+      },
+      "second": {
+        "mom_index": 100.0,
+        "mom_pct": 0.0,
+        "yoy_index": 96.2,
+        "yoy_pct": -3.8,
+        "ytd_index": 93.9,
+        "ytd_pct": -6.1
+      }
+    },
+    {
+      "city": "安庆",
+      "new": {
+        "mom_index": 99.5,
+        "mom_pct": -0.5,
+        "yoy_index": 95.2,
+        "yoy_pct": -4.8,
+        "ytd_index": 96.2,
+        "ytd_pct": -3.8
+      },
+      "second": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 95.8,
+        "yoy_pct": -4.2,
+        "ytd_index": 94.6,
+        "ytd_pct": -5.4
+      }
+    },
+    {
+      "city": "福州",
+      "new": {
+        "mom_index": 100.0,
+        "mom_pct": 0.0,
+        "yoy_index": 94.7,
+        "yoy_pct": -5.3,
+        "ytd_index": 95.2,
+        "ytd_pct": -4.8
+      },
+      "second": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 95.2,
+        "yoy_pct": -4.8,
+        "ytd_index": 94.4,
+        "ytd_pct": -5.6
+      }
+    },
+    {
+      "city": "泉州",
+      "new": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 96.3,
+        "yoy_pct": -3.7,
+        "ytd_index": 96.5,
+        "ytd_pct": -3.5
+      },
+      "second": {
+        "mom_index": 99.5,
+        "mom_pct": -0.5,
+        "yoy_index": 95.6,
+        "yoy_pct": -4.4,
+        "ytd_index": 95.6,
+        "ytd_pct": -4.4
+      }
+    },
+    {
+      "city": "厦门",
+      "new": {
+        "mom_index": 100.1,
+        "mom_pct": 0.1,
+        "yoy_index": 98.6,
+        "yoy_pct": -1.4,
+        "ytd_index": 97.3,
+        "ytd_pct": -2.7
+      },
+      "second": {
+        "mom_index": 99.4,
+        "mom_pct": -0.6,
+        "yoy_index": 95.2,
+        "yoy_pct": -4.8,
+        "ytd_index": 93.8,
+        "ytd_pct": -6.2
+      }
+    },
+    {
+      "city": "九江",
+      "new": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 94.5,
+        "yoy_pct": -5.5,
+        "ytd_index": 95.5,
+        "ytd_pct": -4.5
+      },
+      "second": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 92.6,
+        "yoy_pct": -7.4,
+        "ytd_index": 92.7,
+        "ytd_pct": -7.3
+      }
+    },
+    {
+      "city": "南昌",
+      "new": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 96.0,
+        "yoy_pct": -4.0,
+        "ytd_index": 95.3,
+        "ytd_pct": -4.7
+      },
+      "second": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 94.2,
+        "yoy_pct": -5.8,
+        "ytd_index": 93.2,
+        "ytd_pct": -6.8
+      }
+    },
+    {
+      "city": "赣州",
+      "new": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 95.8,
+        "yoy_pct": -4.2,
+        "ytd_index": 95.5,
+        "ytd_pct": -4.5
+      },
+      "second": {
+        "mom_index": 99.4,
+        "mom_pct": -0.6,
+        "yoy_index": 93.7,
+        "yoy_pct": -6.3,
+        "ytd_index": 93.5,
+        "ytd_pct": -6.5
+      }
+    },
+    {
+      "city": "济南",
+      "new": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 96.7,
+        "yoy_pct": -3.3,
+        "ytd_index": 96.6,
+        "ytd_pct": -3.4
+      },
+      "second": {
+        "mom_index": 99.4,
+        "mom_pct": -0.6,
+        "yoy_index": 94.8,
+        "yoy_pct": -5.2,
+        "ytd_index": 94.7,
+        "ytd_pct": -5.3
+      }
+    },
+    {
+      "city": "烟台",
+      "new": {
+        "mom_index": 99.9,
+        "mom_pct": -0.1,
+        "yoy_index": 97.6,
+        "yoy_pct": -2.4,
+        "ytd_index": 96.6,
+        "ytd_pct": -3.4
+      },
+      "second": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 95.1,
+        "yoy_pct": -4.9,
+        "ytd_index": 93.8,
+        "ytd_pct": -6.2
+      }
+    },
+    {
+      "city": "青岛",
+      "new": {
+        "mom_index": 100.0,
+        "mom_pct": 0.0,
+        "yoy_index": 98.4,
+        "yoy_pct": -1.6,
+        "ytd_index": 97.5,
+        "ytd_pct": -2.5
+      },
+      "second": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 94.6,
+        "yoy_pct": -5.4,
+        "ytd_index": 93.6,
+        "ytd_pct": -6.4
+      }
+    },
+    {
+      "city": "济宁",
+      "new": {
+        "mom_index": 99.9,
+        "mom_pct": -0.1,
+        "yoy_index": 96.3,
+        "yoy_pct": -3.7,
+        "ytd_index": 95.5,
+        "ytd_pct": -4.5
+      },
+      "second": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 95.0,
+        "yoy_pct": -5.0,
+        "ytd_index": 93.7,
+        "ytd_pct": -6.3
+      }
+    },
+    {
+      "city": "郑州",
+      "new": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 95.1,
+        "yoy_pct": -4.9,
+        "ytd_index": 94.6,
+        "ytd_pct": -5.4
+      },
+      "second": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 94.7,
+        "yoy_pct": -5.3,
+        "ytd_index": 92.7,
+        "ytd_pct": -7.3
+      }
+    },
+    {
+      "city": "洛阳",
+      "new": {
+        "mom_index": 99.4,
+        "mom_pct": -0.6,
+        "yoy_index": 93.7,
+        "yoy_pct": -6.3,
+        "ytd_index": 94.7,
+        "ytd_pct": -5.3
+      },
+      "second": {
+        "mom_index": 99.3,
+        "mom_pct": -0.7,
+        "yoy_index": 93.8,
+        "yoy_pct": -6.2,
+        "ytd_index": 94.7,
+        "ytd_pct": -5.3
+      }
+    },
+    {
+      "city": "武汉",
+      "new": {
+        "mom_index": 99.9,
+        "mom_pct": -0.1,
+        "yoy_index": 98.3,
+        "yoy_pct": -1.7,
+        "ytd_index": 96.9,
+        "ytd_pct": -3.1
+      },
+      "second": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 93.7,
+        "yoy_pct": -6.3,
+        "ytd_index": 91.5,
+        "ytd_pct": -8.5
+      }
+    },
+    {
+      "city": "平顶山",
+      "new": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 96.9,
+        "yoy_pct": -3.1,
+        "ytd_index": 97.6,
+        "ytd_pct": -2.4
+      },
+      "second": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 92.6,
+        "yoy_pct": -7.4,
+        "ytd_index": 92.6,
+        "ytd_pct": -7.4
+      }
+    },
+    {
+      "city": "长沙",
+      "new": {
+        "mom_index": 100.0,
+        "mom_pct": 0.0,
+        "yoy_index": 95.9,
+        "yoy_pct": -4.1,
+        "ytd_index": 96.4,
+        "ytd_pct": -3.6
+      },
+      "second": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 94.0,
+        "yoy_pct": -6.0,
+        "ytd_index": 92.3,
+        "ytd_pct": -7.7
+      }
+    },
+    {
+      "city": "宜昌",
+      "new": {
+        "mom_index": 99.9,
+        "mom_pct": -0.1,
+        "yoy_index": 98.9,
+        "yoy_pct": -1.1,
+        "ytd_index": 99.7,
+        "ytd_pct": -0.3
+      },
+      "second": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 96.3,
+        "yoy_pct": -3.7,
+        "ytd_index": 95.7,
+        "ytd_pct": -4.3
+      }
+    },
+    {
+      "city": "广州",
+      "new": {
+        "mom_index": 100.1,
+        "mom_pct": 0.1,
+        "yoy_index": 98.1,
+        "yoy_pct": -1.9,
+        "ytd_index": 96.3,
+        "ytd_pct": -3.7
+      },
+      "second": {
+        "mom_index": 100.0,
+        "mom_pct": 0.0,
+        "yoy_index": 96.2,
+        "yoy_pct": -3.8,
+        "ytd_index": 93.2,
+        "ytd_pct": -6.8
+      }
+    },
+    {
+      "city": "襄阳",
+      "new": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 94.6,
+        "yoy_pct": -5.4,
+        "ytd_index": 94.9,
+        "ytd_pct": -5.1
+      },
+      "second": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 93.3,
+        "yoy_pct": -6.7,
+        "ytd_index": 92.9,
+        "ytd_pct": -7.1
+      }
+    },
+    {
+      "city": "深圳",
+      "new": {
+        "mom_index": 100.2,
+        "mom_pct": 0.2,
+        "yoy_index": 97.7,
+        "yoy_pct": -2.3,
+        "ytd_index": 95.7,
+        "ytd_pct": -4.3
+      },
+      "second": {
+        "mom_index": 100.1,
+        "mom_pct": 0.1,
+        "yoy_index": 97.3,
+        "yoy_pct": -2.7,
+        "ytd_index": 94.5,
+        "ytd_pct": -5.5
+      }
+    },
+    {
+      "city": "岳阳",
+      "new": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 95.0,
+        "yoy_pct": -5.0,
+        "ytd_index": 95.2,
+        "ytd_pct": -4.8
+      },
+      "second": {
+        "mom_index": 99.5,
+        "mom_pct": -0.5,
+        "yoy_index": 94.0,
+        "yoy_pct": -6.0,
+        "ytd_index": 93.7,
+        "ytd_pct": -6.3
+      }
+    },
+    {
+      "city": "南宁",
+      "new": {
+        "mom_index": 100.2,
+        "mom_pct": 0.2,
+        "yoy_index": 96.4,
+        "yoy_pct": -3.6,
+        "ytd_index": 96.9,
+        "ytd_pct": -3.1
+      },
+      "second": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 93.8,
+        "yoy_pct": -6.2,
+        "ytd_index": 93.4,
+        "ytd_pct": -6.6
+      }
+    },
+    {
+      "city": "常德",
+      "new": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 94.2,
+        "yoy_pct": -5.8,
+        "ytd_index": 94.8,
+        "ytd_pct": -5.2
+      },
+      "second": {
+        "mom_index": 99.5,
+        "mom_pct": -0.5,
+        "yoy_index": 93.2,
+        "yoy_pct": -6.8,
+        "ytd_index": 92.4,
+        "ytd_pct": -7.6
+      }
+    },
+    {
+      "city": "海口",
+      "new": {
+        "mom_index": 99.2,
+        "mom_pct": -0.8,
+        "yoy_index": 94.9,
+        "yoy_pct": -5.1,
+        "ytd_index": 94.9,
+        "ytd_pct": -5.1
+      },
+      "second": {
+        "mom_index": 99.0,
+        "mom_pct": -1.0,
+        "yoy_index": 92.7,
+        "yoy_pct": -7.3,
+        "ytd_index": 93.4,
+        "ytd_pct": -6.6
+      }
+    },
+    {
+      "city": "韶关",
+      "new": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 96.4,
+        "yoy_pct": -3.6,
+        "ytd_index": 97.4,
+        "ytd_pct": -2.6
+      },
+      "second": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 94.0,
+        "yoy_pct": -6.0,
+        "ytd_index": 94.6,
+        "ytd_pct": -5.4
+      }
+    },
+    {
+      "city": "重庆",
+      "new": {
+        "mom_index": 100.0,
+        "mom_pct": 0.0,
+        "yoy_index": 96.9,
+        "yoy_pct": -3.1,
+        "ytd_index": 96.0,
+        "ytd_pct": -4.0
+      },
+      "second": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 95.9,
+        "yoy_pct": -4.1,
+        "ytd_index": 94.7,
+        "ytd_pct": -5.3
+      }
+    },
+    {
+      "city": "湛江",
+      "new": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 94.7,
+        "yoy_pct": -5.3,
+        "ytd_index": 95.3,
+        "ytd_pct": -4.7
+      },
+      "second": {
+        "mom_index": 99.3,
+        "mom_pct": -0.7,
+        "yoy_index": 93.6,
+        "yoy_pct": -6.4,
+        "ytd_index": 94.2,
+        "ytd_pct": -5.8
+      }
+    },
+    {
+      "city": "成都",
+      "new": {
+        "mom_index": 99.9,
+        "mom_pct": -0.1,
+        "yoy_index": 95.0,
+        "yoy_pct": -5.0,
+        "ytd_index": 95.4,
+        "ytd_pct": -4.6
+      },
+      "second": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 94.2,
+        "yoy_pct": -5.8,
+        "ytd_index": 94.1,
+        "ytd_pct": -5.9
+      }
+    },
+    {
+      "city": "惠州",
+      "new": {
+        "mom_index": 100.2,
+        "mom_pct": 0.2,
+        "yoy_index": 96.2,
+        "yoy_pct": -3.8,
+        "ytd_index": 95.3,
+        "ytd_pct": -4.7
+      },
+      "second": {
+        "mom_index": 99.9,
+        "mom_pct": -0.1,
+        "yoy_index": 94.8,
+        "yoy_pct": -5.2,
+        "ytd_index": 93.7,
+        "ytd_pct": -6.3
+      }
+    },
+    {
+      "city": "贵阳",
+      "new": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 96.7,
+        "yoy_pct": -3.3,
+        "ytd_index": 96.3,
+        "ytd_pct": -3.7
+      },
+      "second": {
+        "mom_index": 99.5,
+        "mom_pct": -0.5,
+        "yoy_index": 94.8,
+        "yoy_pct": -5.2,
+        "ytd_index": 94.6,
+        "ytd_pct": -5.4
+      }
+    },
+    {
+      "city": "桂林",
+      "new": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 94.2,
+        "yoy_pct": -5.8,
+        "ytd_index": 94.4,
+        "ytd_pct": -5.6
+      },
+      "second": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 93.5,
+        "yoy_pct": -6.5,
+        "ytd_index": 93.0,
+        "ytd_pct": -7.0
+      }
+    },
+    {
+      "city": "昆明",
+      "new": {
+        "mom_index": 99.9,
+        "mom_pct": -0.1,
+        "yoy_index": 94.8,
+        "yoy_pct": -5.2,
+        "ytd_index": 94.1,
+        "ytd_pct": -5.9
+      },
+      "second": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 93.1,
+        "yoy_pct": -6.9,
+        "ytd_index": 92.9,
+        "ytd_pct": -7.1
+      }
+    },
+    {
+      "city": "北海",
+      "new": {
+        "mom_index": 99.4,
+        "mom_pct": -0.6,
+        "yoy_index": 93.8,
+        "yoy_pct": -6.2,
+        "ytd_index": 93.9,
+        "ytd_pct": -6.1
+      },
+      "second": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 93.4,
+        "yoy_pct": -6.6,
+        "ytd_index": 93.1,
+        "ytd_pct": -6.9
+      }
+    },
+    {
+      "city": "西安",
+      "new": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 94.6,
+        "yoy_pct": -5.4,
+        "ytd_index": 94.4,
+        "ytd_pct": -5.6
+      },
+      "second": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 94.0,
+        "yoy_pct": -6.0,
+        "ytd_index": 92.1,
+        "ytd_pct": -7.9
+      }
+    },
+    {
+      "city": "三亚",
+      "new": {
+        "mom_index": 100.0,
+        "mom_pct": 0.0,
+        "yoy_index": 98.3,
+        "yoy_pct": -1.7,
+        "ytd_index": 98.6,
+        "ytd_pct": -1.4
+      },
+      "second": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 93.2,
+        "yoy_pct": -6.8,
+        "ytd_index": 93.0,
+        "ytd_pct": -7.0
+      }
+    },
+    {
+      "city": "兰州",
+      "new": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 96.5,
+        "yoy_pct": -3.5,
+        "ytd_index": 95.8,
+        "ytd_pct": -4.2
+      },
+      "second": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 95.7,
+        "yoy_pct": -4.3,
+        "ytd_index": 94.8,
+        "ytd_pct": -5.2
+      }
+    },
+    {
+      "city": "泸州",
+      "new": {
+        "mom_index": 99.4,
+        "mom_pct": -0.6,
+        "yoy_index": 92.3,
+        "yoy_pct": -7.7,
+        "ytd_index": 92.9,
+        "ytd_pct": -7.1
+      },
+      "second": {
+        "mom_index": 99.4,
+        "mom_pct": -0.6,
+        "yoy_index": 91.0,
+        "yoy_pct": -9.0,
+        "ytd_index": 91.3,
+        "ytd_pct": -8.7
+      }
+    },
+    {
+      "city": "西宁",
+      "new": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 95.2,
+        "yoy_pct": -4.8,
+        "ytd_index": 96.1,
+        "ytd_pct": -3.9
+      },
+      "second": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 97.1,
+        "yoy_pct": -2.9,
+        "ytd_index": 97.9,
+        "ytd_pct": -2.1
+      }
+    },
+    {
+      "city": "南充",
+      "new": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 96.5,
+        "yoy_pct": -3.5,
+        "ytd_index": 96.5,
+        "ytd_pct": -3.5
+      },
+      "second": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 94.5,
+        "yoy_pct": -5.5,
+        "ytd_index": 94.6,
+        "ytd_pct": -5.4
+      }
+    },
+    {
+      "city": "银川",
+      "new": {
+        "mom_index": 100.1,
+        "mom_pct": 0.1,
+        "yoy_index": 98.7,
+        "yoy_pct": -1.3,
+        "ytd_index": 97.4,
+        "ytd_pct": -2.6
+      },
+      "second": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 94.4,
+        "yoy_pct": -5.6,
+        "ytd_index": 93.7,
+        "ytd_pct": -6.3
+      }
+    },
+    {
+      "city": "遵义",
+      "new": {
+        "mom_index": 99.8,
+        "mom_pct": -0.2,
+        "yoy_index": 96.0,
+        "yoy_pct": -4.0,
+        "ytd_index": 96.4,
+        "ytd_pct": -3.6
+      },
+      "second": {
+        "mom_index": 99.7,
+        "mom_pct": -0.3,
+        "yoy_index": 94.5,
+        "yoy_pct": -5.5,
+        "ytd_index": 94.7,
+        "ytd_pct": -5.3
+      }
+    },
+    {
+      "city": "乌鲁木齐",
+      "new": {
+        "mom_index": 100.1,
+        "mom_pct": 0.1,
+        "yoy_index": 98.9,
+        "yoy_pct": -1.1,
+        "ytd_index": 99.7,
+        "ytd_pct": -0.3
+      },
+      "second": {
+        "mom_index": 99.9,
+        "mom_pct": -0.1,
+        "yoy_index": 95.5,
+        "yoy_pct": -4.5,
+        "ytd_index": 95.2,
+        "ytd_pct": -4.8
+      }
+    },
+    {
+      "city": "大理",
+      "new": {
+        "mom_index": 99.9,
+        "mom_pct": -0.1,
+        "yoy_index": 97.6,
+        "yoy_pct": -2.4,
+        "ytd_index": 96.6,
+        "ytd_pct": -3.4
+      },
+      "second": {
+        "mom_index": 99.6,
+        "mom_pct": -0.4,
+        "yoy_index": 93.2,
+        "yoy_pct": -6.8,
+        "ytd_index": 93.6,
+        "ytd_pct": -6.4
+      }
+    }
+  ]
+}

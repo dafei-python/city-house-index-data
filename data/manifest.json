@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "data_version": 20261107083302,
+  "latest_month": "2026-09",
+  "source": "国家统计局 70 个大中城市商品住宅销售价格变动情况",
+  "source_column": "新建商品住宅销售价格指数 / 二手住宅销售价格指数",
+  "months": [
+    {
+      "month": "2026-09",
+      "file": "index_70cities_2026-09.json"
+    },
+    {
+      "month": "2026-08",
+      "file": "index_70cities_2026-08.json"
+    },
+    {
+      "month": "2026-07",
+      "file": "index_70cities_2026-07.json"
+    },
+    {
+      "month": "2026-06",
+      "file": "index_70cities_2026-06.json"
+    },
+    {
+      "month": "2026-05",
+      "file": "index_70cities_2026-05.json"
+    },
+    {
+      "month": "2026-04",
+      "file": "index_70cities_2026-04.json"
+    },
+    {
+      "month": "2026-03",
+      "file": "index_70cities_2026-03.json"
+    },
+    {
+      "month": "2026-02",
+      "file": "index_70cities_2026-02.json"
+    },
+    {
+      "month": "2026-01",
+      "file": "index_70cities_2026-01.json"
+    },
+    {
+      "month": "2025-12",
+      "file": "index_70cities_2025-12.json"
+    },
+    {
+      "month": "2025-11",
+      "file": "index_70cities_2025-11.json"
+    },
+    {
+      "month": "2025-10",
+      "file": "index_70cities_2025-10.json"
+    },
+    {
+      "month": "2025-09",
+      "file": "index_70cities_2025-09.json"
+    },
+    {
+      "month": "2025-08",
+      "file": "index_70cities_2025-08.json"
+    }
+  ],
+  "files": [
+    {
+      "file": "base_prices.json",
+      "sha256": "aec367257dd8d413c25c35b0576db03b57539e8cb424dbe71902864d8eda83e3",
+      "size": 18053
+    },
+    {
+      "file": "deals.json",
+      "sha256": "a7385710662f00f695fa7e0a3f9024d380940159ec9cf1e54a5ea6066fc08082",
+      "size": 7538
+    },
+    {
+      "file": "index_70cities_2025-08.json",
+      "sha256": "dc90d9ed0b5cc7fe941b870b870b532bdc16cfb33aa61ad428b8e55b971f8c19",
+      "size": 28778
+    },
+    {
+      "file": "index_70cities_2025-09.json",
+      "sha256": "026cc79145b261f9d29719fc2f8c93ff68d9eac40b304c8b1091d781821a9c1d",
+      "size": 28776
+    },
+    {
+      "file": "index_70cities_2025-10.json",
+      "sha256": "3bc91e1d4f7ac646bd949e79ca4da7b89df2d4c5fe7ac4438a86c6da8b2694b4",
+      "size": 28779
+    },
+    {
+      "file": "index_70cities_2025-11.json",
+      "sha256": "917c44416848afbe7f9523dbe1c71baf1e99409adb39300a16f48c3cf27094ac",
+      "size": 28779
+    },
+    {
+      "file": "index_70cities_2025-12.json",
+      "sha256": "768e64eda4503a65f352edb392ebdde2019fdde2b3fb419fcba9a4eb1e27dc75",
+      "size": 28779
+    },
+    {
+      "file": "index_70cities_2026-01.json",
+      "sha256": "eb289355af71b002013e4b91ddf0e700d265cd1c9e2aa1bfe475f2510091f34e",
+      "size": 28776
+    },
+    {
+      "file": "index_70cities_2026-02.json",
+      "sha256": "1bfe57fb7d90e08dd38023c33946f9d15d1ba4f89f2ea295f7c565b12b239f0f",
+      "size": 28776
+    },
+    {
+      "file": "index_70cities_2026-03.json",
+      "sha256": "dbb4c214fe28cad47319e89ea33a999f41201dec5922065c592eba1e4846f709",
+      "size": 28775
+    },
+    {
+      "file": "index_70cities_2026-04.json",
+      "sha256": "a28356064268b5874e7c1e9fca118a64b810b3d2df5597948d04f7307e459a77",
+      "size": 28775
+    },
+    {
+      "file": "index_70cities_2026-05.json",
+      "sha256": "ac51f39755c5eac8e723d36f70ce0baab1bd7492c87375c5d903e8225800772f",
+      "size": 28775
+    },
+    {
+      "file": "index_70cities_2026-06.json",
+      "sha256": "5e6dcd21fd13beec547f535ecb13cb080c8362f6179ada1c1f4ff677fb11a250",
+      "size": 28775
+    },
+    {
+      "file": "index_70cities_2026-07.json",
+      "sha256": "9eb243226a956563eea2f38d1ecc66de8ceff62a7bcaa54dec6c80af20026577",
+      "size": 28775
+    },
+    {
+      "file": "index_70cities_2026-08.json",
+      "sha256": "fb69b1545e9d3a62c8b4b92e7ca4e93c35ee5804e691f07355cea0db313395c1",
+      "size": 28775
+    },
+    {
+      "file": "index_70cities_2026-09.json",
+      "sha256": "14e470a013ad777d9ba198f3813a8bdc0a311d19ceb3607c081ae16f935de1ca",
+      "size": 28775
+    },
+    {
+      "file": "provinces.json",
+      "sha256": "e69b4907788ce619e2b23d0568a8c376fb3ec9644ec56d1a13cb6d9b4ad357ae",
+      "size": 21271
+    }
+  ],
+  "generated_at": "2026-11-07T08:33:02Z"
+}
