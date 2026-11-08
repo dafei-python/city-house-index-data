@@ -1,0 +1,76 @@
+name: 成交量（月更 · 西安/武汉）
+
+# 这两城的官方成交量只有「整月累计」月报，没有日更页面：
+#   - 西安：市住建局「房产市场交易」栏目，每月初发上月经纪机构网签备案情况（10 月报于 11-06 发布）
+#   - 武汉：市住房和城市更新局「新建商品房成交统计情况」，次月初发布上月合计
+# 所以单独一个 workflow，只在每月 3–10 日跑；不影响日更。
+#
+# UTC → 北京时间：20 1 3-10 * * → 每月 3–10 日 09:20 北京时间
+on:
+  schedule:
+    - cron: "20 1 3-10 * *"
+  workflow_dispatch: # 网页上手动 Run workflow
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-deals-monthly
+  cancel-in-progress: false
+
+jobs:
+  update-deals-monthly:
+    name: 抓取西安/武汉月报
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 准备 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 安装依赖
+        run: pip install beautifulsoup4 lxml
+
+      - name: 抓取月报（合并进 deals.json，不覆盖日更城市）
+        # 解析失败会以非 0 退出，仓库里的旧 deals.json 保持不变
+        run: python3 data-pipeline/scrape_deals.py --monthly
+
+      - name: 重建 manifest（含今天的运行心跳）
+        run: python3 data-pipeline/publish_data.py --in-place --data-dir data --run-kind deals
+
+      - name: 有变化才提交（只有心跳变化时记为心跳提交）
+        run: |
+          if git diff --quiet -- data; then
+            echo "数据无变化，且今天已经记录过心跳，跳过提交"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/deals.json; then
+            MSG="chore(data): 成交量月报运行心跳 $(date -u +%F)"
+          else
+            MSG="data(deals-month): 西安/武汉月报 $(date -u +%F)"
+          fi
+          git add data
+          git commit -m "$MSG"
+          git push
+
+      - name: 运行摘要
+        if: always()
+        run: |
+          python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json, pathlib
+          d = json.loads(pathlib.Path("data/deals.json").read_text(encoding="utf-8"))
+          print("| 城市 | 口径 | 数据截止 |")
+          print("| --- | --- | --- |")
+          for c in d.get("cities", []):
+              if c.get("granularity") == "month_to_date":
+                  print(f"| {c.get('city')} | 月报 | {c.get('period_end')} |")
+          m = json.loads(pathlib.Path("data/manifest.json").read_text(encoding="utf-8"))
+          print("")
+          print(f"心跳：{m.get('last_run_at')}（{m.get('last_run_kind')}），data_version={m.get('data_version')}")
+          PY

@@ -79,14 +79,14 @@
     {
      "label": "市区合计",
      "date": "2026/11/8",
-     "count": 8,
-     "area": 988.35
+     "count": 9,
+     "area": 1118.55
     },
     {
      "label": "其中住宅",
      "date": "2026/11/8",
-     "count": 8,
-     "area": 988.35
+     "count": 9,
+     "area": 1118.55
     }
    ],
    "details": []
@@ -114,33 +114,6 @@
      "date": "2026/11/7",
      "count": 474,
      "area": 26207.77
-    }
-   ],
-   "details": []
-  },
-  {
-   "city": "武汉",
-   "status": "accessible_static",
-   "portal": "武汉市住房和城市更新局",
-   "url": "https://zgj.wuhan.gov.cn/xxgk/xxgkml/sjfb/spzfxysydjcjb/202611/t20261103_2873424.shtml",
-   "note": "每月初发布上月新建商品房成交统计，整月累计；每日明细接口需登录。",
-   "granularity": "month_to_date",
-   "period": "month_to_date",
-   "period_start": "2026-10-01",
-   "period_end": "2026-10-31",
-   "fetched_at": "2026-11-08",
-   "rows": [
-    {
-     "label": "商品住房",
-     "date": "2026-10-31",
-     "count": 5895,
-     "area": 720678.02
-    },
-    {
-     "label": "合计（含写字楼/商业/其他）",
-     "date": "2026-10-31",
-     "count": 6300,
-     "area": 805263.26
     }
    ],
    "details": []
@@ -227,6 +200,60 @@
    "period_end": null,
    "fetched_at": "2026-11-08",
    "rows": [],
+   "details": []
+  },
+  {
+   "city": "武汉",
+   "status": "accessible_static",
+   "portal": "武汉市住房和城市更新局",
+   "url": "https://zgj.wuhan.gov.cn/xxgk/xxgkml/sjfb/spzfxysydjcjb/202611/t20261103_2873424.shtml",
+   "note": "每月初发布上月新建商品房成交统计，整月累计；每日明细接口需登录。",
+   "granularity": "month_to_date",
+   "period": "month_to_date",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-31",
+   "fetched_at": "2026-11-08",
+   "rows": [
+    {
+     "label": "商品住房",
+     "date": "2026-10-31",
+     "count": 5895,
+     "area": 720678.02
+    },
+    {
+     "label": "合计（含写字楼/商业/其他）",
+     "date": "2026-10-31",
+     "count": 6300,
+     "area": 805263.26
+    }
+   ],
+   "details": []
+  },
+  {
+   "city": "西安",
+   "status": "accessible_static",
+   "portal": "西安市住房和城乡建设局",
+   "url": "https://zjj.xa.gov.cn/zw/zfxxgkml/zwxx/gsgg/fcscjy/2118548734971330562.html",
+   "note": "每月初发布上月二手房网签备案，整月累计；全市总量为 96.11 万㎡口径。",
+   "granularity": "month_to_date",
+   "period": "month_to_date",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-31",
+   "fetched_at": "2026-11-08",
+   "rows": [
+    {
+     "label": "10 月住宅网签备案",
+     "date": "2026-10-31",
+     "count": 8506,
+     "area": 881600.0
+    },
+    {
+     "label": "10 月存量房合计（仅面积）",
+     "date": "2026-10-31",
+     "count": null,
+     "area": 961100.0
+    }
+   ],
    "details": []
   }
  ]

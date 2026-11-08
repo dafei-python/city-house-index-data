@@ -1,15 +1,21 @@
 name: 成交量（日更）
 
 # GitHub 的 cron 一律按 UTC 计算，下面是换算后的北京时间：
-#   20 1 * * * → 09:20 北京时间（主跑）
-#   20 5 * * * → 13:20 北京时间（补跑：GitHub 调度器是 best-effort，偶发延迟/漏跑时兜底）
+#   20 0 * * *  → 08:20 北京时间（主跑：北京/广州当天已给出前一日的日结）
+#   20 5 * * *  → 13:20 北京时间（补跑：GitHub 调度器 best-effort，漏跑时兜底；
+#                 苏州/南京/杭州/青岛是「当日累计」，这一班数值比早班更全）
+#   40 14 * * * → 22:40 北京时间（晚班：当日累计接近日终值，当晚即可看到较完整数据）
 #
-# 只跑成交量这一个 job，不再和房价指数共享触发时间：
-# 一个 workflow 里的多条 cron 会触发「全部 job」，会让另一个 job 也跟着多跑一次。
+# 只跑日更城市：北京、青岛、苏州、南京、杭州、广州。
+# 西安（二手房网签）与武汉（新建商品房成交）官方只发月报，由 update-deals-monthly.yml 负责，
+# 不进日更，避免每天报「解析失败」。日更不会冲掉已有月报数据。
+#
+# 一个 workflow 里的多条 cron 会触发「全部 job」，所以日更与月更必须拆成两个文件。
 on:
   schedule:
-    - cron: "20 1 * * *"
+    - cron: "20 0 * * *"
     - cron: "20 5 * * *"
+    - cron: "40 14 * * *"
   workflow_dispatch: # 网页上手动 Run workflow
 
 permissions:
@@ -22,7 +28,7 @@ concurrency:
 
 jobs:
   update-deals:
-    name: 抓取 8 城官方网签
+    name: 抓取 6 城官方网签（日更）
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:

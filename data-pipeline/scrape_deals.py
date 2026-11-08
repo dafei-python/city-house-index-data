@@ -3,6 +3,11 @@
 """成交量抓取：只抓官方公开页面，按城市分别失败，互不影响。
 输出 data/deals.json（App 内置数据 + 远端更新共用）。
 口径字段：period=day（单日/即时）或 month_to_date（当月累计），并带 period_start/period_end。
+
+两种模式：
+- 默认（日更）：只跑 DAILY_PARTS，整份重写 deals.json。
+- --monthly（月更）：只跑 MONTHLY_PARTS，把结果合并进已有 deals.json（不覆盖日更城市）。
+西安、武汉官方只发月报，不参与日更，避免每天报「解析失败」。
 """
 import json
 import re
@@ -209,7 +214,10 @@ def wuhan():
                       f"{y:04d}-{mo:02d}-01", end)
 
 
-PARTS = [beijing, hangzhou, qingdao, suzhou, nanjing, guangzhou, xian, wuhan]
+# 日更：页面给出的是「当日」或「前一日」的单日数据
+DAILY_PARTS = [beijing, hangzhou, qingdao, suzhou, nanjing, guangzhou]
+# 月更：官方只发整月累计月报（西安二手房网签、武汉新建商品房成交），不进日更
+MONTHLY_PARTS = [xian, wuhan]
 
 NOT_INTEGRATED = [
     ("深圳", "login_required", "深圳市住房和建设局 / 深圳市政府数据开放平台",
@@ -224,29 +232,68 @@ NOT_INTEGRATED = [
 ]
 
 
-def main():
-    cities = []
-    errors = []
-    for fn in PARTS:
+def not_integrated_rows():
+    return [{"city": city, "status": status, "portal": portal, "url": url, "note": note,
+             "granularity": "none", "period": "day", "period_start": None, "period_end": None,
+             "fetched_at": TODAY, "rows": [], "details": []}
+            for city, status, portal, url, note in NOT_INTEGRATED]
+
+
+def scrape(parts):
+    cities, errors = [], []
+    for fn in parts:
         try:
             cities.append(fn())
             print(f"OK {fn.__name__}", file=sys.stderr)
         except Exception as e:
             errors.append(f"{fn.__name__}: {e}")
             print(f"FAIL {fn.__name__}: {e}", file=sys.stderr)
-    for city, status, portal, url, note in NOT_INTEGRATED:
-        cities.append({"city": city, "status": status, "portal": portal, "url": url, "note": note,
-                       "granularity": "none", "period": "day", "period_start": None, "period_end": None,
-                       "fetched_at": TODAY, "rows": [], "details": []})
+    return cities, errors
 
-    # 8 个城市全部失败时，绝不能写出一份只有「未接入」三行的空数据把昨天的结果覆盖掉。
-    # 直接失败退出：Actions 里会显示红叉，仓库里的旧 deals.json 保持不变。
-    ok_count = len(PARTS) - len(errors)
+
+def previous_cities():
+    """读上一份 deals.json 的城市列表；读不到或结构不对就当没有。"""
+    try:
+        old = json.loads(OUT.read_text(encoding="utf-8"))
+        cities = old.get("cities")
+        return cities if isinstance(cities, list) else []
+    except Exception:
+        return []
+
+
+def main():
+    monthly = "--monthly" in sys.argv
+    parts = MONTHLY_PARTS if monthly else DAILY_PARTS
+    cities, errors = scrape(parts)
+
+    # 一条都没抓到就绝不写：宁可失败（Actions 红叉），也不能把昨天的结果覆盖成空。
+    ok_count = len(parts) - len(errors)
     if ok_count == 0:
         print("本次抓取 0 城成功，保留上一份 deals.json 不覆盖。", file=sys.stderr)
         raise SystemExit(1)
 
-    cities.sort(key=lambda c: (c["status"] in ("accessible_static", "accessible_api"), len(c["rows"])), reverse=True)
+    if monthly:
+        # 月更只替换自己这几城，日更城市原样保留（顺序也不动）。
+        merged = previous_cities()
+        by_name = {c.get("city"): c for c in merged}
+        for c in cities:
+            if c["city"] in by_name:
+                merged[merged.index(by_name[c["city"]])] = c
+            else:
+                merged.append(c)
+        for c in not_integrated_rows():
+            if c["city"] not in by_name:
+                merged.append(c)
+        cities = merged
+    else:
+        cities = cities + not_integrated_rows()
+        cities.sort(key=lambda c: (c["status"] in ("accessible_static", "accessible_api"), len(c["rows"])),
+                    reverse=True)
+        # 日更不产月报城市：把上一份里的月更城市（西安/武汉）原样带上，别把月报冲掉。
+        kept = [c for c in previous_cities() if c.get("granularity") == "month_to_date"]
+        have = {c.get("city") for c in cities}
+        cities += [c for c in kept if c.get("city") not in have]
+
     data = {
         "schema_version": 2,
         "generated_at": TODAY,
@@ -255,7 +302,9 @@ def main():
         "cities": cities,
     }
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"写入 {OUT}：{len(cities)} 城，成功 {ok_count}/{len(PARTS)}，失败 {len(errors)}", file=sys.stderr)
+    mode = "月更" if monthly else "日更"
+    print(f"写入 {OUT}（{mode}）：{len(cities)} 城，成功 {ok_count}/{len(parts)}，失败 {len(errors)}",
+          file=sys.stderr)
 
 
 if __name__ == "__main__":
