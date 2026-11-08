@@ -256,15 +256,32 @@ def not_integrated_rows():
 
 
 def scrape(parts):
-    cities, errors = [], []
+    cities, errors, failed = [], [], []
     for fn in parts:
         try:
             cities.append(fn())
             print(f"OK {fn.__name__}", file=sys.stderr)
         except Exception as e:
             errors.append(f"{fn.__name__}: {e}")
+            failed.append(fn)
             print(f"FAIL {fn.__name__}: {e}", file=sys.stderr)
-    return cities, errors
+    return cities, errors, failed
+
+
+PART_CITY = {beijing: "北京", hangzhou: "杭州", qingdao: "青岛", suzhou: "苏州",
+             nanjing: "南京", guangzhou: "广州", xian: "西安", wuhan: "武汉"}
+
+
+def kept_failed(failed):
+    """抓取失败的城市保留上一份数据：一次网络抖动不该让整座城市从榜上消失。"""
+    old = {c.get("city"): c for c in previous_cities()}
+    out = []
+    for fn in failed:
+        c = old.get(PART_CITY.get(fn))
+        if c:
+            out.append(c)
+            print(f"KEEP {c['city']}：沿用上一份（{c.get('period_end')}）", file=sys.stderr)
+    return out
 
 
 def previous_cities():
@@ -280,7 +297,7 @@ def previous_cities():
 def main():
     monthly = "--monthly" in sys.argv
     parts = MONTHLY_PARTS if monthly else DAILY_PARTS
-    cities, errors = scrape(parts)
+    cities, errors, failed = scrape(parts)
 
     # 一条都没抓到就绝不写：宁可失败（Actions 红叉），也不能把昨天的结果覆盖成空。
     ok_count = len(parts) - len(errors)
@@ -302,9 +319,9 @@ def main():
                 merged.append(c)
         cities = merged
     else:
-        cities = cities + not_integrated_rows()
-        cities.sort(key=lambda c: (c["status"] in ("accessible_static", "accessible_api"), len(c["rows"])),
-                    reverse=True)
+        cities = cities + kept_failed(failed) + not_integrated_rows()
+        cities.sort(key=lambda c: (c["status"] in ("accessible_static", "accessible_api"), len(c["rows"]),
+                                   c.get("granularity") == "month_to_date"), reverse=True)
         # 日更不产月报城市：把上一份里的月更城市（西安/武汉）原样带上，别把月报冲掉。
         kept = [c for c in previous_cities() if c.get("granularity") == "month_to_date"]
         have = {c.get("city") for c in cities}

@@ -5,6 +5,39 @@
  "disclaimer": "本页不展示任何未经官方发布的成交数据；没有逐套明细的城市，官方只公布汇总。",
  "cities": [
   {
+   "city": "北京",
+   "status": "accessible_static",
+   "portal": "北京市住房和城乡建设委员会",
+   "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53607241",
+   "note": "官方「房地产数据统计」页，仅最新一日；期房+现房为新房，存量房为二手。",
+   "granularity": "day",
+   "period": "day",
+   "period_start": "2026/11/7",
+   "period_end": "2026/11/7",
+   "fetched_at": "2026-11-08",
+   "rows": [
+    {
+     "label": "期房",
+     "date": "2026/11/7",
+     "count": 304,
+     "area": 25702.0
+    },
+    {
+     "label": "现房",
+     "date": "2026/11/7",
+     "count": 35,
+     "area": 3010.0
+    },
+    {
+     "label": "存量房",
+     "date": "2026/11/7",
+     "count": 197,
+     "area": 16928.0
+    }
+   ],
+   "details": []
+  },
+  {
    "city": "青岛",
    "status": "accessible_api",
    "portal": "青岛住房网信息发布系统（市不动产登记中心）",
