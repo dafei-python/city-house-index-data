@@ -238,6 +238,14 @@ def main():
         cities.append({"city": city, "status": status, "portal": portal, "url": url, "note": note,
                        "granularity": "none", "period": "day", "period_start": None, "period_end": None,
                        "fetched_at": TODAY, "rows": [], "details": []})
+
+    # 8 个城市全部失败时，绝不能写出一份只有「未接入」三行的空数据把昨天的结果覆盖掉。
+    # 直接失败退出：Actions 里会显示红叉，仓库里的旧 deals.json 保持不变。
+    ok_count = len(PARTS) - len(errors)
+    if ok_count == 0:
+        print("本次抓取 0 城成功，保留上一份 deals.json 不覆盖。", file=sys.stderr)
+        raise SystemExit(1)
+
     cities.sort(key=lambda c: (c["status"] in ("accessible_static", "accessible_api"), len(c["rows"])), reverse=True)
     data = {
         "schema_version": 2,
@@ -247,7 +255,7 @@ def main():
         "cities": cities,
     }
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"写入 {OUT}：{len(cities)} 城，成功 {len(cities) - len(NOT_INTEGRATED) - len(errors)}，失败 {len(errors)}", file=sys.stderr)
+    print(f"写入 {OUT}：{len(cities)} 城，成功 {ok_count}/{len(PARTS)}，失败 {len(errors)}", file=sys.stderr)
 
 
 if __name__ == "__main__":

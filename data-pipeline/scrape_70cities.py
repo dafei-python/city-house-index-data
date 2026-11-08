@@ -297,22 +297,9 @@ def main():
         ok += 1
         log("  -> %s（%d 城，发布日 %s）" % (os.path.basename(row_path), len(data["cities"]), data["publish_date"]))
 
-    # 生成数据清单：以输出目录里实际存在的 JSON 为准，避免清单与目录不一致
-    files = sorted([os.path.basename(p) for p in glob.glob(os.path.join(out_dir, "index_70cities_*.json"))], reverse=True)
-    months = [re.search(r"index_70cities_(.+?)\.json", f).group(1) for f in files]
-    manifest = {
-        "schema_version": 1,
-        "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "source": "国家统计局 70 个大中城市商品住宅销售价格变动情况",
-        "source_column": COLUMN,
-        "latest_month": months[0] if months else None,
-        "months": [{"month": m, "file": "index_70cities_%s.json" % m} for m in months],
-    }
-    with open(os.path.join(out_dir, "manifest.json"), "w", encoding="utf-8") as f:
-        f.write(json.dumps(manifest, ensure_ascii=False, indent=2))
-    with open(os.path.join(OUT_ROWS, "manifest.json"), "w", encoding="utf-8") as f:
-        f.write(json.dumps(manifest, ensure_ascii=False, indent=2))
-
+    # manifest 由 publish_data.py 统一生成（含 sha256 / data_version / 运行心跳）。
+    # 这里不要再写 manifest：旧版会覆盖成精简版，丢掉 files 和 data_version，
+    # 导致 Actions 里每次跑都产生一份「假变化」。
     log("完成：成功 %d 个月，失败 %d 个月" % (ok, fail))
     return 0 if fail == 0 else 1
 

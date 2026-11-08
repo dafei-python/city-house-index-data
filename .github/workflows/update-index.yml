@@ -1,0 +1,91 @@
+name: 房价指数（月更 · 15–19 日窗口）
+
+# GitHub 的 cron 一律按 UTC 计算，下面是换算后的北京时间：
+#   40 2 * * * → 10:40 北京时间（主跑）
+#   40 6 * * * → 14:40 北京时间（补跑：GitHub 调度器是 best-effort，偶发延迟/漏跑时兜底）
+#
+# 只跑房价指数这一个 job。每月 1–14 日官方不可能发布上月数据，
+# 所以这些天只记一次「窗口外」心跳，不做下载、不碰数据文件。
+on:
+  schedule:
+    - cron: "40 2 * * *"
+    - cron: "40 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-index
+  cancel-in-progress: false
+
+jobs:
+  update-index:
+    name: 检查并抓取最新一期指数
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 准备 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 判断今天是否可能有新月份
+        id: gate
+        run: |
+          if python3 data-pipeline/should_update_index.py --data-dir data; then
+            echo "run=1" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=0" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 安装依赖
+        if: steps.gate.outputs.run == '1'
+        run: pip install beautifulsoup4 lxml
+
+      - name: 抓取最新一期（已存在则跳过）
+        if: steps.gate.outputs.run == '1'
+        run: python3 data-pipeline/scrape_70cities.py --months 1 --out data --skip-existing
+
+      - name: 重建 manifest（含今天的运行心跳）
+        run: |
+          if [ "${{ steps.gate.outputs.run }}" = "1" ]; then
+            python3 data-pipeline/publish_data.py --in-place --data-dir data --run-kind index
+          else
+            python3 data-pipeline/publish_data.py --in-place --data-dir data --run-kind index --result not_in_window
+          fi
+
+      - name: 有变化才提交（只有心跳变化时记为心跳提交）
+        run: |
+          if git diff --quiet -- data; then
+            echo "没有新月份，且今天已经记录过心跳，跳过提交"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- 'data/index_70cities_*.json'; then
+            MSG="chore(data): 指数检查心跳 $(date -u +%F)"
+          else
+            MONTH=$(python3 -c "import json;print(json.load(open('data/manifest.json'))['latest_month'])")
+            MSG="data(index): $MONTH"
+          fi
+          git add data
+          git commit -m "$MSG"
+          git push
+
+      - name: 运行摘要
+        if: always()
+        run: |
+          python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json, pathlib
+          m = json.loads(pathlib.Path("data/manifest.json").read_text(encoding="utf-8"))
+          print("| 项目 | 值 |")
+          print("| --- | --- |")
+          print(f"| 最近运行 | {m.get('last_run_at')}（{m.get('last_run_kind')}） |")
+          print(f"| 指数月份 | {m.get('latest_month')} |")
+          print(f"| 成交量数据日期 | {m.get('deals_latest')} |")
+          print(f"| data_version | {m.get('data_version')} |")
+          PY

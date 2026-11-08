@@ -213,6 +213,16 @@ def main():
     idx70 = json.load(open(os.path.join(ASSETS, "index_70cities_2026-09.json")))
 
     base = {}
+    # 已核实的分城市锚点（人工核对过来源）保留：避免重跑时被省级代替覆盖
+    curated = {}
+    prev_path = os.path.join(ASSETS, "base_prices.json")
+    if os.path.exists(prev_path):
+        try:
+            prev = json.load(open(prev_path, encoding="utf-8"))
+            curated = {c: v for c, v in prev.get("cities", {}).items()
+                       if v.get("level") == "city" and v.get("evidence") and v.get("source_url")}
+        except Exception:
+            curated = {}
     level_city, level_prov, none_list = [], [], []
     for city in [c["city"] for c in idx70["cities"]]:
         meta = city_meta.get(city)
@@ -231,6 +241,10 @@ def main():
                 "area_wan_sqm": info["area"], "amount_yi": info["amount"],
                 "note": "", "evidence": info["evidence"]
             }
+            level_city.append(city)
+            continue
+        if city in curated:
+            base[city] = curated[city]
             level_city.append(city)
             continue
         prov = city_to_prov.get(city)

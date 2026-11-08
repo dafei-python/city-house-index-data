@@ -1,0 +1,76 @@
+name: 成交量（日更）
+
+# GitHub 的 cron 一律按 UTC 计算，下面是换算后的北京时间：
+#   20 1 * * * → 09:20 北京时间（主跑）
+#   20 5 * * * → 13:20 北京时间（补跑：GitHub 调度器是 best-effort，偶发延迟/漏跑时兜底）
+#
+# 只跑成交量这一个 job，不再和房价指数共享触发时间：
+# 一个 workflow 里的多条 cron 会触发「全部 job」，会让另一个 job 也跟着多跑一次。
+on:
+  schedule:
+    - cron: "20 1 * * *"
+    - cron: "20 5 * * *"
+  workflow_dispatch: # 网页上手动 Run workflow
+
+permissions:
+  contents: write
+
+# 同一 workflow 不并发：后一次排队，避免两次抓到同一份数据互相覆盖
+concurrency:
+  group: update-deals
+  cancel-in-progress: false
+
+jobs:
+  update-deals:
+    name: 抓取 8 城官方网签
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 准备 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 安装依赖
+        run: pip install beautifulsoup4 lxml
+
+      - name: 抓取各城市官方网签
+        # 8 城全部抓取失败时脚本会以非 0 退出，且不覆盖仓库里已有的 deals.json
+        run: python3 data-pipeline/scrape_deals.py
+
+      - name: 重建 manifest（含今天的运行心跳）
+        run: python3 data-pipeline/publish_data.py --in-place --data-dir data --run-kind deals
+
+      - name: 有变化才提交（只有心跳变化时记为心跳提交）
+        run: |
+          if git diff --quiet -- data; then
+            echo "数据无变化，且今天已经记录过心跳，跳过提交"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/deals.json; then
+            MSG="chore(data): 成交量运行心跳 $(date -u +%F)"
+          else
+            MSG="data(deals): 成交量 $(date -u +%F)"
+          fi
+          git add data
+          git commit -m "$MSG"
+          git push
+
+      - name: 运行摘要
+        if: always()
+        run: |
+          python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json, pathlib
+          m = json.loads(pathlib.Path("data/manifest.json").read_text(encoding="utf-8"))
+          print("| 项目 | 值 |")
+          print("| --- | --- |")
+          print(f"| 最近运行 | {m.get('last_run_at')}（{m.get('last_run_kind')}） |")
+          print(f"| 成交量数据日期 | {m.get('deals_latest')} |")
+          print(f"| 房价指数月份 | {m.get('latest_month')} |")
+          print(f"| data_version | {m.get('data_version')} |")
+          PY
