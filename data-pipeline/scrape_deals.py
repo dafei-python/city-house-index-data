@@ -26,19 +26,35 @@ TODAY = date.today().isoformat()
 
 def fetch(url: str, referer=None, timeout: int = 30) -> str:
     """用系统 curl 抓取：部分政府站点 TLS 握手/UA 校验对 urllib 不友好。"""
-    cmd = ["curl", "-sS", "-L", "--max-time", str(timeout), "-A", UA, "-H", "Accept: */*"]
+    cmd = ["curl", "-sS", "-L", "--max-time", str(timeout), "-A", UA, "-H", "Accept: */*",
+           "-w", "\n__HTTP_CODE__%{http_code}"]
     if referer:
         cmd += ["-H", f"Referer: {referer}"]
     cmd.append(url)
     raw = subprocess.run(cmd, capture_output=True, timeout=timeout + 10).stdout
-    if not raw:
+    text = b""
+    code = 0
+    if b"\n__HTTP_CODE__" in raw:
+        text, _, tail = raw.rpartition(b"\n__HTTP_CODE__")
+        try:
+            code = int(tail.strip() or b"0")
+        except ValueError:
+            code = 0
+    else:
+        text = raw
+    # 403 在西安这类站点上是「对境外/云机房拦截」，必须和「页面改版」区分开报
+    if code in (401, 403, 407, 429):
+        raise RuntimeError(f"HTTP {code}（站点拦截境外/云 IP）：{url}")
+    if code >= 400:
+        raise RuntimeError(f"HTTP {code}：{url}")
+    if not text:
         raise RuntimeError(f"空响应：{url}")
     for enc in ("utf-8", "gb18030"):
         try:
-            return raw.decode(enc)
+            return text.decode(enc)
         except UnicodeDecodeError:
             continue
-    return raw.decode("utf-8", "ignore")
+    return text.decode("utf-8", "ignore")
 
 
 def plain(html: str) -> str:
@@ -157,12 +173,12 @@ def guangzhou():
 
 def xian():
     list_url = "https://zjj.xa.gov.cn/zw/zfxxgkml/zwxx/gsgg/fcscjy/1.html"
-    try:
-        html = fetch(list_url)
-        links = re.findall(r'href="([^"]*fcscjy/[^"/]+\.html)"[^>]*>[^<]*二手房网签情况', html)
-        url = ("https://zjj.xa.gov.cn" + links[0]) if links else list_url
-    except Exception:
-        url = list_url
+    # 列表页抓取失败必须直接报出来：以前 catch 后回落到列表页再解析，会误报「页面结构变化」
+    html = fetch(list_url)
+    links = re.findall(r'href="([^"]*fcscjy/[^"/]+\.html)"[^>]*>[^<]*二手房网签情况', html)
+    if not links:
+        raise RuntimeError("西安列表页未找到月报链接")
+    url = ("https://zjj.xa.gov.cn" + links[0]) if links[0].startswith("/") else links[0]
     t = plain(fetch(url))
     m = re.search(r"(20\d{2})年(\d{1,2})月份[^。]{0,20}存量房（二手房）网签备案面积([0-9.]+)万平方米[；，]" +
                   r"其中，?住宅网签备案(\d+)套，面积([0-9.]+)万平方米", t)
