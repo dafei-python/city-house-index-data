@@ -1,6 +1,6 @@
 {
  "schema_version": 2,
- "generated_at": "2026-11-08",
+ "generated_at": "2026-11-09",
  "caliber": "单日或当月累计网签套数与面积；不代表挂牌量；网签有滞后，退房会回改。",
  "disclaimer": "本页不展示任何未经官方发布的成交数据；没有逐套明细的城市，官方只公布汇总。",
  "cities": [
@@ -12,54 +12,27 @@
    "note": "官方「房地产数据统计」页，仅最新一日；期房+现房为新房，存量房为二手。",
    "granularity": "day",
    "period": "day",
-   "period_start": "2026/11/7",
-   "period_end": "2026/11/7",
-   "fetched_at": "2026-11-08",
+   "period_start": "2026/11/8",
+   "period_end": "2026/11/8",
+   "fetched_at": "2026-11-09",
    "rows": [
     {
      "label": "期房",
-     "date": "2026/11/7",
-     "count": 304,
-     "area": 25702.0
+     "date": "2026/11/8",
+     "count": 307,
+     "area": 25244.0
     },
     {
      "label": "现房",
-     "date": "2026/11/7",
-     "count": 35,
-     "area": 3010.0
+     "date": "2026/11/8",
+     "count": 33,
+     "area": 2504.0
     },
     {
      "label": "存量房",
-     "date": "2026/11/7",
-     "count": 197,
-     "area": 16928.0
-    }
-   ],
-   "details": []
-  },
-  {
-   "city": "广州",
-   "status": "accessible_api",
-   "portal": "广州市住房和城乡建设局（阳光家缘）",
-   "url": "https://zfcj.gz.gov.cn/ysqgk/Api/WebApi/mrxjspfqyxx.ashx",
-   "note": "官方每日新建商品房签约接口，按区分行；住宅为主，另含商业/办公/车位。",
-   "granularity": "day",
-   "period": "day",
-   "period_start": "2026/11/7",
-   "period_end": "2026/11/7",
-   "fetched_at": "2026-11-08",
-   "rows": [
-    {
-     "label": "住宅签约",
-     "date": "2026/11/7",
-     "count": 198,
-     "area": 21056.5
-    },
-    {
-     "label": "住宅+商业+办公+车位",
-     "date": "2026/11/7",
-     "count": 474,
-     "area": 26207.77
+     "date": "2026/11/8",
+     "count": 118,
+     "area": 10985.0
     }
    ],
    "details": []
@@ -72,21 +45,21 @@
    "note": "官方 AJAX 接口返回 JSON，当日口径；忽略日期参数，无历史回补。",
    "granularity": "day",
    "period": "day",
-   "period_start": "2026-11-08",
-   "period_end": "2026-11-08",
-   "fetched_at": "2026-11-08",
+   "period_start": "2026-11-09",
+   "period_end": "2026-11-09",
+   "fetched_at": "2026-11-09",
    "rows": [
     {
      "label": "新房（全市）",
-     "date": "2026-11-08",
-     "count": 31,
-     "area": 3679.0
+     "date": "2026-11-09",
+     "count": 40,
+     "area": 5324.0
     },
     {
      "label": "其中住宅",
-     "date": "2026-11-08",
-     "count": 30,
-     "area": 3621.59
+     "date": "2026-11-09",
+     "count": 38,
+     "area": 5143.48
     }
    ],
    "details": []
@@ -99,21 +72,48 @@
    "note": "官方 ASPX 静态表，按区给出小计与住宅，仅当日。",
    "granularity": "day",
    "period": "day",
-   "period_start": "2026/11/8",
-   "period_end": "2026/11/8",
-   "fetched_at": "2026-11-08",
+   "period_start": "2026/11/9",
+   "period_end": "2026/11/9",
+   "fetched_at": "2026-11-09",
    "rows": [
     {
      "label": "市区合计",
-     "date": "2026/11/8",
-     "count": 9,
-     "area": 1118.55
+     "date": "2026/11/9",
+     "count": 48,
+     "area": 5763.87
     },
     {
      "label": "其中住宅",
+     "date": "2026/11/9",
+     "count": 36,
+     "area": 5349.1
+    }
+   ],
+   "details": []
+  },
+  {
+   "city": "广州",
+   "status": "accessible_api",
+   "portal": "广州市住房和城乡建设局（阳光家缘）",
+   "url": "https://zfcj.gz.gov.cn/ysqgk/Api/WebApi/mrxjspfqyxx.ashx",
+   "note": "官方每日新建商品房签约接口，按区分行；住宅为主，另含商业/办公/车位。",
+   "granularity": "day",
+   "period": "day",
+   "period_start": "2026/11/8",
+   "period_end": "2026/11/8",
+   "fetched_at": "2026-11-09",
+   "rows": [
+    {
+     "label": "住宅签约",
      "date": "2026/11/8",
-     "count": 9,
-     "area": 1118.55
+     "count": 133,
+     "area": 14417.4
+    },
+    {
+     "label": "住宅+商业+办公+车位",
+     "date": "2026/11/8",
+     "count": 309,
+     "area": 17108.41
     }
    ],
    "details": []
@@ -126,15 +126,15 @@
    "note": "今日商品房累计成交（截至抓取时刻，单日口径；每小时更新一次）。",
    "granularity": "day",
    "period": "day",
-   "period_start": "2026-11-08",
-   "period_end": "2026-11-08",
-   "fetched_at": "2026-11-08",
+   "period_start": "2026-11-09",
+   "period_end": "2026-11-09",
+   "fetched_at": "2026-11-09",
    "rows": [
     {
      "label": "新房合计（当日）",
-     "date": "2026-11-08",
-     "count": 0,
-     "area": 0.0
+     "date": "2026-11-09",
+     "count": 10,
+     "area": 1951.37
     }
    ],
    "details": []
@@ -147,14 +147,14 @@
    "note": "官方首页静态数字，单日成交套数；页面日期由脚本生成，抓取日见抓取时间；本月成交面积另给，未公布当月套数。",
    "granularity": "day",
    "period": "day",
-   "period_start": "2026-11-08",
-   "period_end": "2026-11-08",
-   "fetched_at": "2026-11-08",
+   "period_start": "2026-11-09",
+   "period_end": "2026-11-09",
+   "fetched_at": "2026-11-09",
    "rows": [
     {
-     "label": "今日成交（含住宅/非住宅），本月（11 月 1 日–今日）成交面积 8.02 万㎡",
-     "date": "2026-11-08",
-     "count": 0,
+     "label": "今日成交（含住宅/非住宅），本月（11 月 1 日–今日）成交面积 8.93 万㎡",
+     "date": "2026-11-09",
+     "count": 100,
      "area": null
     }
    ],
@@ -170,7 +170,7 @@
    "period": "day",
    "period_start": null,
    "period_end": null,
-   "fetched_at": "2026-11-08",
+   "fetched_at": "2026-11-09",
    "rows": [],
    "details": []
   },
@@ -184,7 +184,7 @@
    "period": "day",
    "period_start": null,
    "period_end": null,
-   "fetched_at": "2026-11-08",
+   "fetched_at": "2026-11-09",
    "rows": [],
    "details": []
   },
@@ -198,7 +198,7 @@
    "period": "day",
    "period_start": null,
    "period_end": null,
-   "fetched_at": "2026-11-08",
+   "fetched_at": "2026-11-09",
    "rows": [],
    "details": []
   },
