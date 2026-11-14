@@ -31,8 +31,9 @@ def parse(path):
 def display(price, kind):
     """返回 (value, unit, note)。价格是全市挂牌/公示均价，note 给出成交估算区间。"""
     lo, hi = round(price * 0.85), round(price * 0.95)
-    tag = "新房" if kind == "NEW" else "二手"
-    note = f"安居客全市{tag}挂牌均价（2026-11）；实际成交约 {lo:,}–{hi:,} 元/㎡（估算）"
+    note = f"实际成交约 {lo:,}–{hi:,} 元/㎡（估算）"
+    if kind == "SECOND":
+        note = note.replace("实际成交", "二手实际成交")
     if price <= YUAN_MAX:
         return f"{round(price / 10) * 10:,}", "元/㎡", note
     return f"{price / 10000:.1f}", "万/㎡", note
