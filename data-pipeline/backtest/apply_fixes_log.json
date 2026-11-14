@@ -1,0 +1,75 @@
+{
+ "generated_at": "2026-11-14T03:56:27Z",
+ "replaced_with_institution": [
+  {
+   "city": "上海",
+   "old": 41484.0,
+   "new": 63939.7
+  },
+  {
+   "city": "南京",
+   "old": 17631.1,
+   "new": 26324.6
+  },
+  {
+   "city": "天津",
+   "old": 14819.4,
+   "new": 16328.8
+  },
+  {
+   "city": "武汉",
+   "old": 12770.8,
+   "new": 13686.6
+  },
+  {
+   "city": "重庆",
+   "old": 6707.0,
+   "new": 11619.9
+  }
+ ],
+ "added": [
+  {
+   "city": "北京",
+   "anchor": 48914.7
+  },
+  {
+   "city": "广州",
+   "anchor": 25796.8
+  },
+  {
+   "city": "成都",
+   "anchor": 16380.3
+  },
+  {
+   "city": "杭州",
+   "anchor": 33778.0
+  },
+  {
+   "city": "深圳",
+   "anchor": 54245.5
+  }
+ ],
+ "removed": [
+  "襄阳"
+ ],
+ "annotated": 34,
+ "province_fixed": [
+  {
+   "province": "北京",
+   "new": 47594
+  },
+  {
+   "province": "天津",
+   "new": 15741
+  },
+  {
+   "province": "上海",
+   "new": 65730
+  },
+  {
+   "province": "重庆",
+   "new": 11341
+  }
+ ],
+ "final_city_count": 44
+}

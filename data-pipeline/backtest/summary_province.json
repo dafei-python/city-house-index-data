@@ -1,0 +1,57 @@
+{
+ "n_provinces": 31,
+ "n_with_core_city": 9,
+ "n_with_anchor": 22,
+ "municipal": [
+  {
+   "province": "北京",
+   "year": 2024,
+   "province_price": 31974.6,
+   "caliber": "全省商品房（含商办/县域）",
+   "core_city": "北京",
+   "core_city_price": 47594,
+   "diff_vs_core_pct": 48.8,
+   "anchor_cities": 0,
+   "anchor_mean": null,
+   "diff_vs_anchor_pct": null
+  },
+  {
+   "province": "天津",
+   "year": 2024,
+   "province_price": 14819.4,
+   "caliber": "全省商品房（含商办/县域）",
+   "core_city": "天津",
+   "core_city_price": 15741,
+   "diff_vs_core_pct": 6.2,
+   "anchor_cities": 1,
+   "anchor_mean": 14819.0,
+   "diff_vs_anchor_pct": 0.0
+  },
+  {
+   "province": "上海",
+   "year": 2025,
+   "province_price": 38630.6,
+   "caliber": "全省商品房（含商办/县域）",
+   "core_city": "上海",
+   "core_city_price": 65730,
+   "diff_vs_core_pct": 70.2,
+   "anchor_cities": 1,
+   "anchor_mean": 41484.0,
+   "diff_vs_anchor_pct": 7.4
+  },
+  {
+   "province": "重庆",
+   "year": 2025,
+   "province_price": 6707.0,
+   "caliber": "全省商品房（含商办/县域）",
+   "core_city": "重庆",
+   "core_city_price": 11341,
+   "diff_vs_core_pct": 69.1,
+   "anchor_cities": 1,
+   "anchor_mean": 6707.0,
+   "diff_vs_anchor_pct": 0.0
+  }
+ ],
+ "core_city_diff_median": 70.2,
+ "anchor_diff_median": 16.6
+}

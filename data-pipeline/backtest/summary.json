@@ -1,0 +1,196 @@
+{
+ "n_prices": 40,
+ "n_estimate_cities": 0,
+ "city_level_anchors": 40,
+ "backtest_1": {
+  "rows": [
+   {
+    "city": "上海",
+    "base_year": 2024,
+    "area_wan_sqm": 1656.86,
+    "amount_yi": 6873.32,
+    "p_comm": 41484.0,
+    "p_res_zsy": 65386,
+    "diff_yuan": 23902.0,
+    "pct": 57.6,
+    "our_yoy_202609": 2.8,
+    "zsy_period": "2026-10",
+    "time_effect_pct_max": 5.6,
+    "pct_ex_time": 52.0
+   },
+   {
+    "city": "南京",
+    "base_year": 2024,
+    "area_wan_sqm": 930.12,
+    "amount_yi": 1639.9,
+    "p_comm": 17631.0,
+    "p_res_zsy": 26104,
+    "diff_yuan": 8473.0,
+    "pct": 48.1,
+    "our_yoy_202609": -0.5,
+    "zsy_period": "2026-10",
+    "time_effect_pct_max": 1.0,
+    "pct_ex_time": 47.1
+   },
+   {
+    "city": "天津",
+    "base_year": 2024,
+    "area_wan_sqm": 1183.81,
+    "amount_yi": 1754.34,
+    "p_comm": 14819.0,
+    "p_res_zsy": 15715,
+    "diff_yuan": 896.0,
+    "pct": 6.0,
+    "our_yoy_202609": -3.6,
+    "zsy_period": "2026-10",
+    "time_effect_pct_max": 7.2,
+    "pct_ex_time": -1.2
+   },
+   {
+    "city": "武汉",
+    "base_year": 2024,
+    "area_wan_sqm": 1998.3,
+    "amount_yi": 2551.98,
+    "p_comm": 12771.0,
+    "p_res_zsy": 13469,
+    "diff_yuan": 698.0,
+    "pct": 5.5,
+    "our_yoy_202609": -1.1,
+    "zsy_period": "2026-10",
+    "time_effect_pct_max": 2.2,
+    "pct_ex_time": 3.3
+   },
+   {
+    "city": "重庆",
+    "base_year": 2025,
+    "area_wan_sqm": 2416.53,
+    "amount_yi": 1620.77,
+    "p_comm": 6707.0,
+    "p_res_zsy": 11350,
+    "diff_yuan": 4643.0,
+    "pct": 69.2,
+    "our_yoy_202609": -2.4,
+    "zsy_period": "2026-10",
+    "time_effect_pct_max": 2.4,
+    "pct_ex_time": 66.8
+   }
+  ],
+  "abs_pct": {
+   "min": 5.5,
+   "q1": 5.75,
+   "median": 48.1,
+   "q3": 63.400000000000006,
+   "max": 69.2,
+   "n": 5
+  },
+  "abs_yuan": {
+   "min": 698.0,
+   "q1": 797.0,
+   "median": 4643.0,
+   "q3": 16187.5,
+   "max": 23902.0,
+   "n": 5
+  },
+  "tier34_rows": [
+   {
+    "city": "襄阳",
+    "base_year": 2024,
+    "p_comm": 6454.0,
+    "p_ref": 8427.29,
+    "ref_scope": "城区商品住房",
+    "ref_period": "2025",
+    "ref_source_level": "媒体/行业协会",
+    "ref_url": "https://m.xfsfc.com.cn/news/21875.html",
+    "diff_yuan": 1973.0,
+    "pct": 30.6
+   }
+  ],
+  "all_abs_pct": {
+   "min": 5.5,
+   "q1": 5.875,
+   "median": 39.35,
+   "q3": 60.5,
+   "max": 69.2,
+   "n": 6
+  },
+  "all_abs_yuan": {
+   "min": 698.0,
+   "q1": 846.5,
+   "median": 3308.0,
+   "q3": 12330.25,
+   "max": 23902.0,
+   "n": 6
+  }
+ },
+ "backtest_2": {
+  "abs_new_pp": {
+   "min": 1.12,
+   "q1": 2.705,
+   "median": 4.17,
+   "q3": 5.035,
+   "max": 13.04,
+   "n": 10
+  },
+  "abs_second_pp": {
+   "min": 0.95,
+   "q1": 2.9974999999999996,
+   "median": 4.25,
+   "q3": 5.5625,
+   "max": 6.87,
+   "n": 10
+  },
+  "abs_new_yuan": {
+   "min": 127.0,
+   "q1": 562.5,
+   "median": 1260.0,
+   "q3": 2083.25,
+   "max": 3230.0,
+   "n": 10
+  }
+ },
+ "backtest_3": {
+  "pairs": [
+   {
+    "city": "河源",
+    "official_price": 3418,
+    "official_period": "2026-01~04",
+    "official_scope": "地级市",
+    "official_caliber": "二手住房成交均价（官方）",
+    "zsy_listing_price": null,
+    "discount_ratio": null,
+    "paired": false
+   },
+   {
+    "city": "青岛城阳区",
+    "official_price": 8285,
+    "official_period": "2026-Q1",
+    "official_scope": "市辖区",
+    "official_caliber": "存量房成交均价（官方，区级）",
+    "zsy_listing_price": null,
+    "discount_ratio": null,
+    "paired": false
+   },
+   {
+    "city": "桐城",
+    "official_price": 4081.18,
+    "official_period": "2026-01~06",
+    "official_scope": "县级市",
+    "official_caliber": "住宅平均成交价（官方）",
+    "zsy_listing_price": null,
+    "discount_ratio": null,
+    "paired": false
+   }
+  ],
+  "paired_samples": 0,
+  "official_second_in_70": 0,
+  "second_over_new": {
+   "min": 0.846,
+   "q1": 0.918,
+   "median": 0.9884999999999999,
+   "q3": 1.2674999999999998,
+   "max": 1.276,
+   "n": 10
+  },
+  "note": "70 城中未发现发布二手成交均价的官方月报；宜昌月报仅有套数/面积（12233 套、128.27 万㎡），无金额无均价。"
+ }
+}
