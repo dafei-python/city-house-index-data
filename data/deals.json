@@ -38,33 +38,6 @@
    "details": []
   },
   {
-   "city": "青岛",
-   "status": "accessible_api",
-   "portal": "青岛住房网信息发布系统（市不动产登记中心）",
-   "url": "https://zhufang.qingdao.gov.cn:8081/getTradeInfo?tradeType=new",
-   "note": "官方 AJAX 接口返回 JSON，当日口径；忽略日期参数，无历史回补。",
-   "granularity": "day",
-   "period": "day",
-   "period_start": "2026-11-15",
-   "period_end": "2026-11-15",
-   "fetched_at": "2026-11-15",
-   "rows": [
-    {
-     "label": "新房（全市）",
-     "date": "2026-11-15",
-     "count": 23,
-     "area": 2486.0
-    },
-    {
-     "label": "其中住宅",
-     "date": "2026-11-15",
-     "count": 17,
-     "area": 2151.7
-    }
-   ],
-   "details": []
-  },
-  {
    "city": "苏州",
    "status": "accessible_static",
    "portal": "苏州市商品房销售网上管理系统",
@@ -79,14 +52,14 @@
     {
      "label": "市区合计",
      "date": "2026/11/15",
-     "count": 17,
-     "area": 1269.27
+     "count": 33,
+     "area": 3124.03
     },
     {
      "label": "其中住宅",
      "date": "2026/11/15",
-     "count": 9,
-     "area": 1172.85
+     "count": 23,
+     "area": 3003.2
     }
    ],
    "details": []
@@ -119,6 +92,33 @@
    "details": []
   },
   {
+   "city": "青岛",
+   "status": "accessible_api",
+   "portal": "青岛住房网信息发布系统（市不动产登记中心）",
+   "url": "https://zhufang.qingdao.gov.cn:8081/getTradeInfo?tradeType=new",
+   "note": "官方 AJAX 接口返回 JSON，当日口径；忽略日期参数，无历史回补。",
+   "granularity": "day",
+   "period": "day",
+   "period_start": "2026-11-15",
+   "period_end": "2026-11-15",
+   "fetched_at": "2026-11-15",
+   "rows": [
+    {
+     "label": "新房（全市）",
+     "date": "2026-11-15",
+     "count": 23,
+     "area": 2486.0
+    },
+    {
+     "label": "其中住宅",
+     "date": "2026-11-15",
+     "count": 17,
+     "area": 2151.7
+    }
+   ],
+   "details": []
+  },
+  {
    "city": "杭州",
    "status": "accessible_static",
    "portal": "杭州透明售房网（数据源：市住保房管网）",
@@ -133,8 +133,8 @@
     {
      "label": "新房合计（当日）",
      "date": "2026-11-15",
-     "count": 13,
-     "area": 1545.12
+     "count": 26,
+     "area": 2985.55
     }
    ],
    "details": []
@@ -152,9 +152,9 @@
    "fetched_at": "2026-11-15",
    "rows": [
     {
-     "label": "今日成交（含住宅/非住宅），本月（11 月 1 日–今日）成交面积 16.1 万㎡",
+     "label": "今日成交（含住宅/非住宅），本月（11 月 1 日–今日）成交面积 16.27 万㎡",
      "date": "2026-11-15",
-     "count": 9,
+     "count": 34,
      "area": null
     }
    ],
