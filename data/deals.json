@@ -1,6 +1,6 @@
 {
  "schema_version": 2,
- "generated_at": "2026-11-15",
+ "generated_at": "2026-11-16",
  "caliber": "单日或当月累计网签套数与面积；不代表挂牌量；网签有滞后，退房会回改。",
  "disclaimer": "本页不展示任何未经官方发布的成交数据；没有逐套明细的城市，官方只公布汇总。",
  "cities": [
@@ -12,27 +12,54 @@
    "note": "官方「房地产数据统计」页，仅最新一日；期房+现房为新房，存量房为二手。",
    "granularity": "day",
    "period": "day",
-   "period_start": "2026/11/14",
-   "period_end": "2026/11/14",
-   "fetched_at": "2026-11-15",
+   "period_start": "2026/11/15",
+   "period_end": "2026/11/15",
+   "fetched_at": "2026-11-16",
    "rows": [
     {
      "label": "期房",
-     "date": "2026/11/14",
-     "count": 206,
-     "area": 10118.0
+     "date": "2026/11/15",
+     "count": 258,
+     "area": 9757.0
     },
     {
      "label": "现房",
-     "date": "2026/11/14",
-     "count": 64,
-     "area": 4263.0
+     "date": "2026/11/15",
+     "count": 55,
+     "area": 3298.0
     },
     {
      "label": "存量房",
-     "date": "2026/11/14",
-     "count": 223,
-     "area": 18480.0
+     "date": "2026/11/15",
+     "count": 139,
+     "area": 12085.0
+    }
+   ],
+   "details": []
+  },
+  {
+   "city": "苏州",
+   "status": "accessible_static",
+   "portal": "苏州市商品房销售网上管理系统",
+   "url": "http://spf.szfcweb.com/szfcweb/DataSerach/XSFWINFO.aspx",
+   "note": "官方 ASPX 静态表，按区给出小计与住宅，仅当日。",
+   "granularity": "day",
+   "period": "day",
+   "period_start": "2026/11/16",
+   "period_end": "2026/11/16",
+   "fetched_at": "2026-11-16",
+   "rows": [
+    {
+     "label": "市区合计",
+     "date": "2026/11/16",
+     "count": 80,
+     "area": 8198.8
+    },
+    {
+     "label": "其中住宅",
+     "date": "2026/11/16",
+     "count": 67,
+     "area": 7868.91
     }
    ],
    "details": []
@@ -45,21 +72,21 @@
    "note": "官方每日新建商品房签约接口，按区分行；住宅为主，另含商业/办公/车位。",
    "granularity": "day",
    "period": "day",
-   "period_start": "2026/11/14",
-   "period_end": "2026/11/14",
-   "fetched_at": "2026-11-15",
+   "period_start": "2026/11/15",
+   "period_end": "2026/11/15",
+   "fetched_at": "2026-11-16",
    "rows": [
     {
      "label": "住宅签约",
-     "date": "2026/11/14",
-     "count": 201,
-     "area": 21718.79
+     "date": "2026/11/15",
+     "count": 132,
+     "area": 13753.66
     },
     {
      "label": "住宅+商业+办公+车位",
-     "date": "2026/11/14",
-     "count": 349,
-     "area": 24140.44
+     "date": "2026/11/15",
+     "count": 266,
+     "area": 16105.87
     }
    ],
    "details": []
@@ -92,33 +119,6 @@
    "details": []
   },
   {
-   "city": "苏州",
-   "status": "accessible_static",
-   "portal": "苏州市商品房销售网上管理系统",
-   "url": "http://spf.szfcweb.com/szfcweb/DataSerach/XSFWINFO.aspx",
-   "note": "官方 ASPX 静态表，按区给出小计与住宅，仅当日。",
-   "granularity": "day",
-   "period": "day",
-   "period_start": "2026/11/15",
-   "period_end": "2026/11/15",
-   "fetched_at": "2026-11-15",
-   "rows": [
-    {
-     "label": "市区合计",
-     "date": "2026/11/15",
-     "count": 33,
-     "area": 3124.03
-    },
-    {
-     "label": "其中住宅",
-     "date": "2026/11/15",
-     "count": 23,
-     "area": 3003.2
-    }
-   ],
-   "details": []
-  },
-  {
    "city": "杭州",
    "status": "accessible_static",
    "portal": "杭州透明售房网（数据源：市住保房管网）",
@@ -126,15 +126,15 @@
    "note": "今日商品房累计成交（截至抓取时刻，单日口径；每小时更新一次）。",
    "granularity": "day",
    "period": "day",
-   "period_start": "2026-11-15",
-   "period_end": "2026-11-15",
-   "fetched_at": "2026-11-15",
+   "period_start": "2026-11-16",
+   "period_end": "2026-11-16",
+   "fetched_at": "2026-11-16",
    "rows": [
     {
      "label": "新房合计（当日）",
-     "date": "2026-11-15",
-     "count": 0,
-     "area": 0.0
+     "date": "2026-11-16",
+     "count": 55,
+     "area": 8824.33
     }
    ],
    "details": []
@@ -147,14 +147,14 @@
    "note": "官方首页静态数字，单日成交套数；页面日期由脚本生成，抓取日见抓取时间；本月成交面积另给，未公布当月套数。",
    "granularity": "day",
    "period": "day",
-   "period_start": "2026-11-15",
-   "period_end": "2026-11-15",
-   "fetched_at": "2026-11-15",
+   "period_start": "2026-11-16",
+   "period_end": "2026-11-16",
+   "fetched_at": "2026-11-16",
    "rows": [
     {
-     "label": "今日成交（含住宅/非住宅），本月（11 月 1 日–今日）成交面积 16.27 万㎡",
-     "date": "2026-11-15",
-     "count": 0,
+     "label": "今日成交（含住宅/非住宅），本月（11 月 1 日–今日）成交面积 17.18 万㎡",
+     "date": "2026-11-16",
+     "count": 117,
      "area": null
     }
    ],
@@ -170,7 +170,7 @@
    "period": "day",
    "period_start": null,
    "period_end": null,
-   "fetched_at": "2026-11-15",
+   "fetched_at": "2026-11-16",
    "rows": [],
    "details": []
   },
@@ -184,7 +184,7 @@
    "period": "day",
    "period_start": null,
    "period_end": null,
-   "fetched_at": "2026-11-15",
+   "fetched_at": "2026-11-16",
    "rows": [],
    "details": []
   },
@@ -198,7 +198,7 @@
    "period": "day",
    "period_start": null,
    "period_end": null,
-   "fetched_at": "2026-11-15",
+   "fetched_at": "2026-11-16",
    "rows": [],
    "details": []
   },
