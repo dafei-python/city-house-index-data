@@ -14,7 +14,7 @@
    "period": "day",
    "period_start": "2026/11/16",
    "period_end": "2026/11/16",
-   "fetched_at": "2026-11-16",
+   "fetched_at": "2026-11-17",
    "rows": [
     {
      "label": "期房",
@@ -38,33 +38,6 @@
    "details": []
   },
   {
-   "city": "青岛",
-   "status": "accessible_api",
-   "portal": "青岛住房网信息发布系统（市不动产登记中心）",
-   "url": "https://zhufang.qingdao.gov.cn:8081/getTradeInfo?tradeType=new",
-   "note": "官方 AJAX 接口返回 JSON，当日口径；忽略日期参数，无历史回补。",
-   "granularity": "day",
-   "period": "day",
-   "period_start": "2026-11-17",
-   "period_end": "2026-11-17",
-   "fetched_at": "2026-11-17",
-   "rows": [
-    {
-     "label": "新房（全市）",
-     "date": "2026-11-17",
-     "count": 83,
-     "area": 14197.0
-    },
-    {
-     "label": "其中住宅",
-     "date": "2026-11-17",
-     "count": 72,
-     "area": 12249.16
-    }
-   ],
-   "details": []
-  },
-  {
    "city": "苏州",
    "status": "accessible_static",
    "portal": "苏州市商品房销售网上管理系统",
@@ -79,14 +52,14 @@
     {
      "label": "市区合计",
      "date": "2026/11/17",
-     "count": 69,
-     "area": 7101.84
+     "count": 120,
+     "area": 12415.74
     },
     {
      "label": "其中住宅",
      "date": "2026/11/17",
-     "count": 47,
-     "area": 6255.54
+     "count": 91,
+     "area": 11363.01
     }
    ],
    "details": []
@@ -119,6 +92,33 @@
    "details": []
   },
   {
+   "city": "青岛",
+   "status": "accessible_api",
+   "portal": "青岛住房网信息发布系统（市不动产登记中心）",
+   "url": "https://zhufang.qingdao.gov.cn:8081/getTradeInfo?tradeType=new",
+   "note": "官方 AJAX 接口返回 JSON，当日口径；忽略日期参数，无历史回补。",
+   "granularity": "day",
+   "period": "day",
+   "period_start": "2026-11-17",
+   "period_end": "2026-11-17",
+   "fetched_at": "2026-11-17",
+   "rows": [
+    {
+     "label": "新房（全市）",
+     "date": "2026-11-17",
+     "count": 83,
+     "area": 14197.0
+    },
+    {
+     "label": "其中住宅",
+     "date": "2026-11-17",
+     "count": 72,
+     "area": 12249.16
+    }
+   ],
+   "details": []
+  },
+  {
    "city": "杭州",
    "status": "accessible_static",
    "portal": "杭州透明售房网（数据源：市住保房管网）",
@@ -133,8 +133,8 @@
     {
      "label": "新房合计（当日）",
      "date": "2026-11-17",
-     "count": 42,
-     "area": 6995.44
+     "count": 145,
+     "area": 21882.19
     }
    ],
    "details": []
@@ -152,9 +152,9 @@
    "fetched_at": "2026-11-17",
    "rows": [
     {
-     "label": "今日成交（含住宅/非住宅），本月（11 月 1 日–今日）成交面积 18.63 万㎡",
+     "label": "今日成交（含住宅/非住宅），本月（11 月 1 日–今日）成交面积 18.98 万㎡",
      "date": "2026-11-17",
-     "count": 111,
+     "count": 153,
      "area": null
     }
    ],
