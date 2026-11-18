@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "data_version": 20261118103930,
+  "data_version": 20261118140233,
   "latest_month": "2026-10",
   "deals_latest": "2026-11-18",
   "source": "国家统计局 70 个大中城市商品住宅销售价格变动情况",
@@ -75,8 +75,8 @@
     },
     {
       "file": "deals.json",
-      "sha256": "eb5a86e6922f61f2d23903b103dd9d9303dbb980b8e61ade52c7216de5f31cab",
-      "size": 7554
+      "sha256": "7a3c70e4d7629bbe1bfaa0cacfe001df22318926d08ebe9220526d0d6ae583e9",
+      "size": 7559
     },
     {
       "file": "index_70cities_2025-08.json",
@@ -164,9 +164,9 @@
       "size": 25917
     }
   ],
-  "last_index_run_at": "2026-11-18T10:39:30Z",
-  "last_index_result": "not_in_window",
-  "generated_at": "2026-11-18T10:39:30Z",
-  "last_run_at": "2026-11-18T10:39:30Z",
-  "last_run_kind": "index"
+  "last_deals_run_at": "2026-11-18T14:02:33Z",
+  "last_deals_result": "changed",
+  "generated_at": "2026-11-18T14:02:33Z",
+  "last_run_at": "2026-11-18T14:02:33Z",
+  "last_run_kind": "deals"
 }
