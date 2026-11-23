@@ -38,6 +38,33 @@
    "details": []
   },
   {
+   "city": "广州",
+   "status": "accessible_api",
+   "portal": "广州市住房和城乡建设局（阳光家缘）",
+   "url": "https://zfcj.gz.gov.cn/ysqgk/Api/WebApi/mrxjspfqyxx.ashx",
+   "note": "官方每日新建商品房签约接口，按区分行；住宅为主，另含商业/办公/车位。",
+   "granularity": "day",
+   "period": "day",
+   "period_start": "2026/11/22",
+   "period_end": "2026/11/22",
+   "fetched_at": "2026-11-23",
+   "rows": [
+    {
+     "label": "住宅签约",
+     "date": "2026/11/22",
+     "count": 161,
+     "area": 17583.16
+    },
+    {
+     "label": "住宅+商业+办公+车位",
+     "date": "2026/11/22",
+     "count": 255,
+     "area": 19112.22
+    }
+   ],
+   "details": []
+  },
+  {
    "city": "青岛",
    "status": "accessible_api",
    "portal": "青岛住房网信息发布系统（市不动产登记中心）",
@@ -92,33 +119,6 @@
    "details": []
   },
   {
-   "city": "广州",
-   "status": "accessible_api",
-   "portal": "广州市住房和城乡建设局（阳光家缘）",
-   "url": "https://zfcj.gz.gov.cn/ysqgk/Api/WebApi/mrxjspfqyxx.ashx",
-   "note": "官方每日新建商品房签约接口，按区分行；住宅为主，另含商业/办公/车位。",
-   "granularity": "day",
-   "period": "day",
-   "period_start": "2026/11/22",
-   "period_end": "2026/11/22",
-   "fetched_at": "2026-11-23",
-   "rows": [
-    {
-     "label": "住宅签约",
-     "date": "2026/11/22",
-     "count": 161,
-     "area": 17583.16
-    },
-    {
-     "label": "住宅+商业+办公+车位",
-     "date": "2026/11/22",
-     "count": 255,
-     "area": 19112.22
-    }
-   ],
-   "details": []
-  },
-  {
    "city": "杭州",
    "status": "accessible_static",
    "portal": "杭州透明售房网（数据源：市住保房管网）",
@@ -133,8 +133,8 @@
     {
      "label": "新房合计（当日）",
      "date": "2026-11-23",
-     "count": 24,
-     "area": 3317.04
+     "count": 82,
+     "area": 10779.53
     }
    ],
    "details": []
@@ -152,9 +152,9 @@
    "fetched_at": "2026-11-23",
    "rows": [
     {
-     "label": "今日成交（含住宅/非住宅），本月（11 月 1 日–今日）成交面积 23.87 万㎡",
+     "label": "今日成交（含住宅/非住宅），本月（11 月 1 日–今日）成交面积 24.38 万㎡",
      "date": "2026-11-23",
-     "count": 154,
+     "count": 224,
      "area": null
     }
    ],
